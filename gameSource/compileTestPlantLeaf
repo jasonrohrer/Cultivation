@@ -1,0 +1,2 @@
+
+g++ -g -o testPlantLeaf testPlantLeaf.cpp features.o ../../minorGems/io/linux/TypeIOLinux.o ../../minorGems/io/file/linux/PathLinux.o ../../minorGems/util/stringUtils.o ../../minorGems/util/StringBufferOutputStream.o ../../minorGems/graphics/openGL/SingleTextureGL.o -I../.. -ljpeg -L/usr/X11R6/lib -lGL -lglut -lGLU -lX11 -lXi -lXext -lXmu

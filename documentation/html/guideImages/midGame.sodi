@@ -1,0 +1,416 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd"
+[
+ <!ATTLIST svg
+  xmlns:xlink CDATA #FIXED "http://www.w3.org/1999/xlink">
+]>
+<!-- Created with Sodipodi ("http://www.sodipodi.com/") -->
+<svg
+   id="svg1"
+   sodipodi:version="0.28"
+   width="210mm"
+   height="297mm"
+   sodipodi:docname="/data4/jcr13/cpp/game2/documentation/html/guideImages/midGame.sodi"
+   sodipodi:docbase="/data4/jcr13/cpp/game2/documentation/html/guideImages/"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     id="base" />
+  <rect
+     style="fill-rule:evenodd;stroke:none;fill:#ffffff;fill-opacity:1;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;"
+     id="rect154"
+     x="-197.576767"
+     y="-41.875717"
+     width="623.422302"
+     height="478.873810"
+     rx="0.000000"
+     ry="0.000000" />
+  <image
+     xlink:href="midGameScreen.png"
+     sodipodi:absref="/data4/jcr13/cpp/game2/documentation/html/guideImages/midGameScreen.png"
+     width="300.000000"
+     height="300.000000"
+     id="image226" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:black;stroke-opacity:1;stroke-width:3.75;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;stroke-dasharray:none;"
+     d="M 166.222 247.322 C 159.584 302.098 156.263 260.601 126.386 270.56 "
+     id="path5"
+     sodipodi:nodetypes="cc"
+     transform="translate(-121.25,51.25)" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:black;stroke-opacity:1;stroke-width:3.75;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;stroke-dasharray:none;"
+     d="M 166.222 247.322 C 152.944 313.717 149.624 305.418 128.045 307.078 "
+     id="path7"
+     sodipodi:nodetypes="cc"
+     transform="translate(-96.25,50)" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:black;stroke-opacity:1;stroke-width:3.75;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;stroke-dasharray:none;"
+     d="M 166.222 247.322 C 169.543 270.56 179.502 340.275 138.005 340.275 "
+     id="path9"
+     sodipodi:nodetypes="cc"
+     transform="translate(-61.25,48.75)" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:black;stroke-opacity:1;stroke-width:3.75;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;stroke-dasharray:none;"
+     d="M 166.222 247.322 C 152.944 313.717 176.182 297.118 206.059 293.798 "
+     id="path12"
+     sodipodi:nodetypes="cc"
+     transform="translate(85,48.75)" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:black;stroke-opacity:1;stroke-width:3.75;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;stroke-dasharray:none;"
+     d="M 166.222 247.322 C 152.944 313.717 191.121 240.682 219.339 252.302 "
+     id="path13"
+     sodipodi:nodetypes="cc"
+     transform="translate(120,47.5)" />
+  <text
+     style="fill:black;stroke:none;font-family:Helvetica;font-style:normal;font-weight:normal;font-size:18;fill-opacity:1;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;text-anchor:start;writing-mode:lr;"
+     x="-120.284391"
+     y="328.661407"
+     id="text14">
+    <tspan
+       x="-120.284"
+       y="328.661"
+       sodipodi:role="line"
+       id="tspan17">
+Plant (disabled)</tspan>
+  </text>
+  <text
+     style="fill:black;stroke:none;font-family:Helvetica;font-style:normal;font-weight:normal;font-size:18;fill-opacity:1;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;text-anchor:start;writing-mode:lr;"
+     x="-32.269212"
+     y="362.856903"
+     id="text19">
+    <tspan
+       x="-32.2692"
+       y="362.857"
+       sodipodi:role="line"
+       id="tspan20">
+Set Plot</tspan>
+  </text>
+  <text
+     style="fill:black;stroke:none;font-family:Helvetica;font-style:normal;font-weight:normal;font-size:18;fill-opacity:1;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;text-anchor:start;writing-mode:lr;"
+     x="-55.371040"
+     y="393.009430"
+     id="text22">
+    <tspan
+       x="-55.371"
+       y="393.009"
+       sodipodi:role="line"
+       id="tspan23">
+Water (disabled)</tspan>
+  </text>
+  <text
+     style="fill:black;stroke:none;font-family:Helvetica;font-style:normal;font-weight:normal;font-size:18;fill-opacity:1;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;text-anchor:start;writing-mode:lr;"
+     x="292.148552"
+     y="347.968719"
+     id="text34">
+    <tspan
+       x="292.149"
+       y="347.969"
+       sodipodi:role="line"
+       id="tspan35">
+Reset (disabled)</tspan>
+  </text>
+  <text
+     style="fill:black;stroke:none;font-family:Helvetica;font-style:normal;font-weight:normal;font-size:18;fill-opacity:1;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;text-anchor:start;writing-mode:lr;"
+     x="341.944824"
+     y="304.811935"
+     id="text38">
+    <tspan
+       x="341.945"
+       y="304.812"
+       sodipodi:role="line"
+       id="tspan82">
+Quit</tspan>
+  </text>
+  <text
+     style="fill:black;stroke:none;font-family:Helvetica;font-style:normal;font-weight:normal;font-size:18;fill-opacity:1;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;text-anchor:start;writing-mode:lr;"
+     x="-188.079292"
+     y="53.953987"
+     id="text41">
+    <tspan
+       x="-188.079"
+       y="53.954"
+       sodipodi:role="line"
+       id="tspan42">
+Eat Selected Fruit</tspan>
+  </text>
+  <text
+     style="fill:black;stroke:none;font-family:Helvetica;font-style:normal;font-weight:normal;font-size:18;fill-opacity:1;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;text-anchor:start;writing-mode:lr;"
+     x="-167.806892"
+     y="6.504951"
+     id="text44">
+    <tspan
+       x="-167.807"
+       y="6.50495"
+       sodipodi:role="line"
+       id="tspan45">
+Give Gift of Selected</tspan>
+    <tspan
+       sodipodi:role="line"
+       id="tspan58"
+       x="-167.807"
+       y="24.505">
+Fruit (disabled)</tspan>
+  </text>
+  <text
+     style="fill:black;stroke:none;font-family:Helvetica;font-style:normal;font-weight:normal;font-size:18;fill-opacity:1;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;text-anchor:start;writing-mode:lr;"
+     x="-139.151652"
+     y="254.111542"
+     id="text47">
+    <tspan
+       x="-139.152"
+       y="254.112"
+       sodipodi:role="line"
+       id="tspan48">
+Discard Selected</tspan>
+    <tspan
+       sodipodi:role="line"
+       id="tspan50"
+       x="-139.152"
+       y="272.112">
+Item</tspan>
+  </text>
+  <text
+     style="fill:black;stroke:none;font-family:Helvetica;font-style:normal;font-weight:normal;font-size:18;fill-opacity:1;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;text-anchor:start;writing-mode:lr;"
+     x="-179.347046"
+     y="102.201248"
+     id="text60">
+    <tspan
+       x="-179.347"
+       y="102.201"
+       sodipodi:role="line"
+       id="tspan61">
+Storage Area</tspan>
+  </text>
+  <text
+     style="fill:black;stroke:none;font-family:Helvetica;font-style:normal;font-weight:normal;font-size:18;fill-opacity:1;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;text-anchor:start;writing-mode:lr;"
+     x="-85.510353"
+     y="180.244995"
+     id="text66">
+    <tspan
+       x="-85.5104"
+       y="180.245"
+       sodipodi:role="line"
+       id="tspan67">
+Seed</tspan>
+  </text>
+  <text
+     style="fill:black;stroke:none;font-family:Helvetica;font-style:normal;font-weight:normal;font-size:18;fill-opacity:1;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;text-anchor:start;writing-mode:lr;"
+     x="-83.010423"
+     y="203.483215"
+     id="text72">
+    <tspan
+       x="-83.0104"
+       y="203.483"
+       sodipodi:role="line"
+       id="tspan73">
+Seed</tspan>
+  </text>
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:black;stroke-opacity:1;stroke-width:3.75;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;stroke-dasharray:none;"
+     d="M 199.42 245.662 C 181.162 245.662 171.202 245.662 154.604 245.662 "
+     id="path75"
+     sodipodi:nodetypes="cc"
+     transform="translate(-196.361,14.1285)" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:black;stroke-opacity:1;stroke-width:3.75;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;stroke-dasharray:none;"
+     d="M 199.42 245.662 C 181.162 245.662 171.202 245.662 154.604 245.662 "
+     id="path76"
+     sodipodi:nodetypes="cc"
+     transform="translate(-193.792,-46.1967)" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:black;stroke-opacity:1;stroke-width:3.75;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;stroke-dasharray:none;"
+     d="M 199.42 245.662 C 181.162 245.662 171.202 245.662 154.604 245.662 "
+     id="path77"
+     sodipodi:nodetypes="cc"
+     transform="translate(-195.285,-69.9211)" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:black;stroke-opacity:1;stroke-width:3.75;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;stroke-dasharray:15,3.75;stroke-dashoffset:0;"
+     d="M 135.753 251.959 C 16.555 236.701 -22.4602 371.249 141.693 350.122 "
+     id="path79"
+     sodipodi:nodetypes="cc"
+     transform="translate(-220.502,-138.295)" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:black;stroke-opacity:1;stroke-width:3.75;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;stroke-dasharray:none;"
+     d="M 199.42 245.662 C 181.162 245.662 171.202 245.662 154.604 245.662 "
+     id="path80"
+     sodipodi:nodetypes="cc"
+     transform="translate(-196.798,-196.592)" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:black;stroke-opacity:1;stroke-width:3.75;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;stroke-dasharray:none;"
+     d="M 199.42 245.662 C 181.162 245.662 171.202 245.662 154.604 245.662 "
+     id="path81"
+     sodipodi:nodetypes="cc"
+     transform="translate(-195.542,-225.38)" />
+  <text
+     style="fill:black;stroke:none;font-family:Helvetica;font-style:normal;font-weight:normal;font-size:18;fill-opacity:1;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;text-anchor:start;writing-mode:lr;"
+     x="-161.801559"
+     y="156.231705"
+     id="text232">
+    <tspan
+       x="-161.802"
+       y="156.232"
+       sodipodi:role="line"
+       id="tspan233">
+Fruit (selected)</tspan>
+  </text>
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:black;stroke-opacity:1;stroke-width:3.75;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;stroke-dasharray:none;"
+     d="M 199.42 245.662 C 181.162 245.662 171.202 245.662 154.604 245.662 "
+     id="path237"
+     sodipodi:nodetypes="cc"
+     transform="translate(-195.285,-95.309)" />
+  <text
+     style="fill:black;stroke:none;font-family:Helvetica;font-style:normal;font-weight:normal;font-size:18;fill-opacity:1;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;text-anchor:start;writing-mode:lr;"
+     x="157.538605"
+     y="-19.625488"
+     id="text238">
+    <tspan
+       x="157.539"
+       y="-19.6255"
+       sodipodi:role="line"
+       id="tspan239">
+Ripe fruit</tspan>
+  </text>
+  <text
+     style="fill:black;stroke:none;font-family:Helvetica;font-style:normal;font-weight:normal;font-size:18;fill-opacity:1;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;text-anchor:start;writing-mode:lr;"
+     x="315.162170"
+     y="133.825516"
+     id="text243">
+    <tspan
+       x="315.162"
+       y="133.826"
+       sodipodi:role="line"
+       id="tspan244">
+Plant that</tspan>
+    <tspan
+       sodipodi:role="line"
+       id="tspan260"
+       x="315.162"
+       y="151.826">
+needs water</tspan>
+  </text>
+  <text
+     style="fill:black;stroke:none;font-family:Helvetica;font-style:normal;font-weight:normal;font-size:18;fill-opacity:1;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;text-anchor:start;writing-mode:lr;"
+     x="67.867424"
+     y="-17.125412"
+     id="text250">
+    <tspan
+       x="67.8674"
+       y="-17.1254"
+       sodipodi:role="line"
+       id="tspan251">
+Flower</tspan>
+  </text>
+  <text
+     style="fill:black;stroke:none;font-family:Helvetica;font-style:normal;font-weight:normal;font-size:18;fill-opacity:1;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;text-anchor:start;writing-mode:lr;"
+     x="317.509602"
+     y="42.276138"
+     id="text253">
+    <tspan
+       x="317.51"
+       y="42.2761"
+       sodipodi:role="line"
+       id="tspan254">
+Plot</tspan>
+  </text>
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:black;stroke-opacity:1;stroke-width:3.75;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;stroke-dasharray:none;"
+     d="M 95.7994 340.045 C 102.474 299.632 191.121 240.682 219.339 252.302 "
+     id="path256"
+     sodipodi:nodetypes="cc"
+     transform="translate(95.3521,-216.585)" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:black;stroke-opacity:1;stroke-width:3.75;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;stroke-dasharray:none;"
+     d="M 117.061 379.57 C 174.986 364.157 198.163 274.72 192.344 248.781 "
+     id="path257"
+     sodipodi:nodetypes="cc"
+     transform="translate(-0.065,-265.576)" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:black;stroke-opacity:1;stroke-width:3.75;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;stroke-dasharray:none;"
+     d="M 47.5541 389.341 C 17.9787 358.928 34.795 289.338 56.628 252.683 "
+     id="path258"
+     sodipodi:nodetypes="cc"
+     transform="translate(34.3187,-267.055)" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:black;stroke-opacity:1;stroke-width:3.75;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;stroke-dasharray:none;"
+     d="M 87.7536 318.308 C 133.161 322.496 158.257 248.898 219.339 252.302 "
+     id="path259"
+     sodipodi:nodetypes="cc"
+     transform="translate(94.1779,-123.862)" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:black;stroke-opacity:1;stroke-width:3.75;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;stroke-dasharray:none;"
+     d="M 166.222 247.322 C 172.98 313.918 146.839 311.856 145.179 358.333 "
+     id="path208"
+     sodipodi:nodetypes="cc"
+     transform="translate(-32.5,51.25)" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:black;stroke-opacity:1;stroke-width:3.75;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;stroke-dasharray:none;"
+     d="M 166.222 247.322 C 152.944 313.717 196.302 312.376 196.302 357.193 "
+     id="path209"
+     sodipodi:nodetypes="cc"
+     transform="translate(-1.25,50)" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:black;stroke-opacity:1;stroke-width:3.75;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;stroke-dasharray:none;"
+     d="M 166.222 247.322 C 152.944 313.717 206.261 296.18 206.261 336.017 "
+     id="path210"
+     sodipodi:nodetypes="cc"
+     transform="translate(27.5,50)" />
+  <text
+     style="fill:black;stroke:none;font-family:Helvetica;font-style:normal;font-weight:normal;font-size:18;fill-opacity:1;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;text-anchor:start;writing-mode:lr;"
+     x="48.536933"
+     y="425.280273"
+     id="text211">
+    <tspan
+       x="48.5369"
+       y="425.28"
+       sodipodi:role="line"
+       id="tspan212">
+Harvest Fruit</tspan>
+  </text>
+  <text
+     style="fill:black;stroke:none;font-family:Helvetica;font-style:normal;font-weight:normal;font-size:18;fill-opacity:1;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;text-anchor:start;writing-mode:lr;"
+     x="187.214813"
+     y="424.650513"
+     id="text214">
+    <tspan
+       x="187.215"
+       y="424.651"
+       sodipodi:role="line"
+       id="tspan215">
+Mate (disabled)</tspan>
+  </text>
+  <text
+     style="fill:black;stroke:none;font-family:Helvetica;font-style:normal;font-weight:normal;font-size:18;fill-opacity:1;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;text-anchor:start;writing-mode:lr;"
+     x="224.335312"
+     y="399.347717"
+     id="text217">
+    <tspan
+       x="224.335"
+       y="399.348"
+       sodipodi:role="line"
+       id="tspan218">
+Lead (disabled)</tspan>
+  </text>
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:black;stroke-opacity:1;stroke-width:3.75;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;stroke-dasharray:none;"
+     d="M 166.222 247.322 C 152.944 313.717 212.13 322.002 223.867 320.759 "
+     id="path82"
+     sodipodi:nodetypes="cc"
+     transform="translate(54.4949,48.827)" />
+  <text
+     style="fill:black;stroke:none;font-family:Helvetica;font-style:normal;font-weight:normal;font-size:18;fill-opacity:1;stroke-opacity:1;stroke-width:1pt;stroke-linejoin:miter;stroke-linecap:butt;text-anchor:start;writing-mode:lr;"
+     x="280.673431"
+     y="375.873474"
+     id="text83">
+    <tspan
+       x="280.673"
+       y="375.873"
+       sodipodi:role="line"
+       id="tspan84">
+Poison</tspan>
+  </text>
+</svg>

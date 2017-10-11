@@ -1,0 +1,1 @@
+sox 4\ \ Sand\ Final\ Mix.AIFF ./music.aiff fade p 0 00:01:37.00 00:00:7.000

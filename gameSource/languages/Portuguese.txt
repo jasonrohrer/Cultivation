@@ -1,0 +1,183 @@
+tip_PlantButton "Semear a semente seleccionada" 
+tip_PlotButton "Escolher um novo pedaco de terra" 
+tip_water_pickup "Encher " 
+tip_water_dump "Regar " 
+tip_WaterButton "Agua" 
+tip_HarvestButton "Colher o fruto" 
+tip_MateButton "Amigo" 
+tip_lead "Dirigir" 
+tip_stop_leading "Parar de dirigir" 
+tip_LeadButton "outro jardineiro" 
+tip_PoisonButton "Envenenar uma planta" 
+tip_PauseButton "Pausa" 
+tip_RestartButton "Recomecar" 
+tip_QuitButton "Sair" 
+tip_EatButton "Comer o fruto seleccionado" 
+tip_GiftButton "Dar o fruto seleccionado" 
+tip_DiscardButton "Deitar fora o elemento seleccionado" 
+tip_fruit "Frutos conservados" 
+tip_poisoned "(envenenado)" 
+tip_seed "Semente conservada" 
+tip_darkSoil "-- gosta de solos escuros" 
+tip_lightSoil "-- gosta de solos claros" 
+tip_StopTutorial "Parar o tutorial" 
+tip_NextTutorial "Continuar o tutorial" 
+
+
+
+tutorial_question "Voce gostaria de ver o tutorial?
+Clique no botao verde 'Continuar' para iniciar o tutorial, ou clique sobre o botao vermelho 'Parar' para fechar o tutorial."
+
+
+tutorial_welcome1 "As janelas do tutorial pausam o jogo. Quando terminar a leitura de uma mensagem, clique no botao verde 'Continuar'."
+
+
+tutorial_welcome2 "Este tutorial vai orienta-lo atraves de um jogo inteiro de Cultivation. Mas atencao : isto pode revelar detalhes e estrategias que seria mais divertido descobrir por conta propria." 
+
+
+tutorial_moving "Primeira coisa : passear. Clique no mapa para mover o seu jardineiro. Clique no botao verde 'Continuar' para experimentar." 
+
+
+tutorial_survival1 "Seu primeiro objectivo e sobreviver. Se voce nao comer, os seus nutrientes tornar-se-ao esgotados, e voce vai envelhecer mais depressa." 
+
+
+tutorial_survival2 "Ha 3 nutrientes: Vermelho, Amarelo e Violeta. As 3 esferas na zona traseira do seu jardineiro mostram seus niveis nutricionais."
+
+
+tutorial_survival3 "Voce usa mais nutrientes quando voce passeia ou carregando algo como agua." 
+
+
+tutorial_survival4 "Voce pode abastecer-se em nutrientes comendo fruta, mas voce precisara obter-la primeiro. Uma maneira de obter frutos e cultivar-los."
+
+
+tutorial_seeds1 "Voce comeca o jogo com algumas sementes armazenadas em sua barra lateral esquerda. Voce pode planta-las para obter frutos."
+
+
+tutorial_plot "Mas antes que voce possa fazer isso, e necessario que voce escolha um pedaco de terra para si mesmo. Clique no botao Escolher e, em seguida, clique e arraste um rectangulo no mapa."
+
+
+tutorial_plant "Agora entramos em seu enredo, clique em uma das sementes armazenadas para selecionar-la e, em seguida, clique no botao 'Semear'."
+
+
+tutorial_water1 "As plantulas precisam de agua para crescer. Mova para a agua e pressione o botao 'Agua' para pegar agua."
+
+
+tutorial_water2 "Mova de volta ao seu plantula e pressione o botao 'Agua' novamente para regar."
+
+
+tutorial_water3 "Um circulo colorido sobre uma planta significa que ela parou de crescer e precisa de mais agua. Quando uma planta cresceu, voce pode parar de rega-la."
+
+tutorial_plot2 "Voce so pode se ocupar das plantas que se encontram em seu enredo, mas voce pode alterar o seu enredo, a qualquer momento."
+
+tutorial_plot3 "Seu enredo pode coincidir com os de outras parcelas jardineiros. Nesse caso, voce e os outros estarao em conflito sobre as plantas na sobreposicao."
+
+
+
+tutorial_harvest1 "Voce tem alguns frutos maduros em seu enredo. Mova perto da planta e carrugue o botao 'Colher'."
+
+
+tutorial_eat1 "A fruta esta agora armazenada em sua barra lateral esquerda. Clique na fruta para seleciona-la e, em seguida, clique no botao 'Comer' para comer-la."
+
+tutorial_eat2 "Um fruto de uma determinada cor e elevado no nutriente dessa cor, mas ela contem apenas vestigios dos outros nutrientes."
+
+tutorial_seeds2 "Note que comer um fruto deu-lhe uma nova semente. Cada fruta contem uma semente."
+
+tutorial_seeds3 "A cor de uma semente mostra que tipo de solo ela prefere. Sementes claras preferem solos claros, bem como as sementes escuras solos escuros. Um tipo de solo ideal ajuda uma planta a crescer mais depressa."
+
+tutorial_seeds4 "O circulo colorido ao lado de cada semente mostra de que cor serao os frutos produzidos pelas plantas resultantes."
+
+tutorial_seeds5 "Para produzir frutas, as plantas cruzam-se com qualquer planta perto delas. Das sementes de frutos resultantes irao crescer plantas hibridas."
+
+tutorial_seeds6 "Colocando certas plantas proximas umas das outras, voce pode seletivamente obter melhores frutos. Por exemplo, voce pode tentar criar plantas que produzem mais frutos."
+
+
+
+
+
+tutorial_gift1 "Voce tambem pode dar frutos para outro jardineiro. Primeiro, meta-se perto do outro jardineiro. Clique na fruta para seleciona-la e, em seguida, clique no botao 'Dar'."
+
+
+tutorial_emotion1 "Seu dom fez que o jardineiro o aprecie mais. + O '+' verde que voou de volta para voce indicou o prazer dele."
+
+
+tutorial_emotion2 "Se voce ve um 'x' vermelho voando em direcao a seu jardineiro, significa que voce esta fazendo outro jardineiro zangado."
+
+tutorial_emotion3 "Voce pode zangar os outros jardineiros ao plantar ou colher nas parcelas deles. Isso so pode acontecer se as parcelas estao em sobreposicao."
+
+
+
+tutorial_lifespan1 "Sua vida e representada pela bola de plasma no centro do seu jardineiro. Ja perdeu metade da sua dimensao, o que significa que a sua vida ja passou de metade."
+
+tutorial_lifespan2a "Voce produziu uma ninhada, assim voce tera controle dela quando voce morrer."
+
+tutorial_lifespan2b "Voce esta gravida. Caso voce pode dar a luz com exito antes que voce morrer, voce vai assumir o controle dela quando termina a sua vida actual."
+
+tutorial_lifespan2c "Seu relogio biologico avanca. Esta na hora de pensar no acasalamento. Se voce nao tem descendencia quando voce morrer, o jogo vai acabar!"
+
+
+tutorial_mating1 "Para simpatisar, meta-se perto de outro jardineiro. Se ele vos apreciar o suficiente, e, se nao estiver ja gravida, o botao 'Amigo' sera activado."
+
+
+tutorial_mating2 "Se ele nao gostar o suficiente para acasalamento, de-lhe uma prenda ou duas. Talvez sejam frutos da paixao..."
+
+tutorial_mating3 "Voce pode zangar outro jardineiro pelo acasalamento com um jardineiro que ela gosta muito. Tenha cuidado quando voce escolhe um amigo."
+
+
+tutorial_pregnant1 "Voce esta gravida. Mantenha os tres niveis de nutrientes, a fim de que a gravidez possa progredir."
+
+
+
+tutorial_birth1 "Parabens, voce so deu origem a um bebe saltitante ... jardineiro! O seu bebe ira seguir - vos e partilhar todos os alimentos que ingerimos por um tempo."
+
+tutorial_birth2 "Comer uma dieta equilibrada para manter o seu bebe crescido. Quando sera crescido que chegue saira por si mesmo."
+
+
+tutorial_poisoned1 "Voce passou num solo envenenado, no entanto alguns dos seus frutos armazenados ficaram envenenados."
+
+tutorial_poisoned2 "Comer frutos envenenados vai provocar uma morte rapida."
+
+
+
+tutorial_death1 "Voce morreu. Note o anel que fara no local de sua morte. Este e o primeiro anel no portao de imortalidade."
+
+tutorial_death2 "Quatro aneis mais devem ser abertos antes que o portao abra. Os jardineiros que voce controla sao especiais: eles tem o poder de abrir estes aneis por morrer."
+
+tutorial_death3 "Para abrir mais aneis, e preciso levar o seu futuro jardineiros volta para o centro do portao logo antes de morrer." 
+
+tutorial_death4 "Se o seu jardineiro morre longe do local de um portao existente, nenhum novo anel sera aberta."
+
+tutorial_death5 "O portao e destruido por um terreno envenenado . Caso isso aconteca, voce tera que iniciar um novo portao noutro sitio."
+
+
+
+tutorial_death1a "Voce simplesmente morreu novamente. Desta vez, voce nao tem descendencia, para que o seu jogo esta terminado. Carregue no botao 'Recomecar' para iniciar um novo jogo."
+
+tutorial_death6a "Infelizmente, voce nao tem descendencia que possa controlar, para que o jogo esta terminado. Carregue no botao 'Recomecar' para iniciar um novo jogo."
+
+tutorial_death6b "Voce tomou o controle da sua proxima ninhada."
+
+
+
+tutorial_gate1 "A porta esta aberta a imortalidade. Cada jardineiro que passe no portao ira se tornar imortal."
+
+tutorial_gate2 "Quando o seu jardineiro entrar no portao, ele fecha-se, e nenhum outro jardineiro podera passar atraves dele."
+
+tutorial_gate3 "Se voce quiser levar algum jardineiros com voce, voce tera que leva-los atraves do portao sem passar o portao voce mesmo." 
+
+tutorial_gate4 "Voce pode usar o botao 'Dirigir' para fazer isso. Mas so os jardineiros que o apreciam vao seguir-lo."
+
+tutorial_gate5 "Quanto mais jardineiros voce salvar, a sua maior recompensa."
+
+
+tutorial_immortal1 "O portao de imortalidade esta agora fechado, e os jardineiros que voce escolheu foram eternizados."
+
+tutorial_immortal2 "Voce recebeu sua recompensa, mas talvez nao a tenha encontrado ainda. A recompensa e algo que voce pode levar com voce fora do jogo."
+
+tutorial_immortal3 "Saia do jogo e, em seguida, dar uma olhada ao redor para achar sua recompensa. Ou, se voce na gosta de procurar, clique no botao Continuar deste tutorial para uma dica." 
+
+
+tutorial_immortal4 "Tem certeza de que quer uma dica?" 
+
+
+tutorial_immortal5 "Olhe por um ficheiro PNG imortal em sua pasta Cultivation. Voce deve ser capaz de ve-lo com um navegador web."
+

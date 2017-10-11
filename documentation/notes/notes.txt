@@ -1,0 +1,2905 @@
+
+
+July 9, 2006
+
+Done with main coding for first iteration.
+
+Problems:
+X-If two plants are right next to each other, and one is ripe, it can
+  be impossible (or difficult) to position yourself to eat it.  Eat button
+  does not become enabled if non-ripe plant is slightly closer.
+ 
+The goal here is to produce release-ready software in each iteration.  Thus,
+before this iteration is complete, we still need:
+
+X-A quit button.
+X-Tweak parameters to make this iteration more fun.
+x-How-to-play documentation.
+X-A release-building script. 
+
+
+
+July 10, 2006
+
+In order to make this iteration "fun," there needs to be some kind of challenge
+that increases as time goes on.
+
+Right now, you must simply learn the basic mechanics of the game, and after
+that, you can play mechanically forever (very boring).
+
+What can make the game get harder and harder?
+
+One idea:  energy usage rate increases as you age.
+
+The goal, then, is to stay alive for as long as possible.
+
+Added this, and it certainly makes it more fun.
+
+
+The behavior of plants and water does not make sense.  Plants should
+turn brown when they are not growing because of a lack of water.
+
+
+
+
+July 13, 2006
+
+Fixed watering plants issue.
+
+Added time display.
+
+
+Almost done with release building script.
+
+Source build works (and compiles).
+
+Still need to test building on Mac and Win32.
+
+
+
+July 15, 2006
+
+Got builds working for MacOSX, Win32, and source distribution.
+
+Tagging all files as   game2_iteration_1
+
+
+
+July 23, 2006
+
+Starting on Iteration 2.
+
+Got fruit storage and eating from storage working.
+
+Got UI working for fruit storage.
+
+
+
+July 24, 2006
+
+Added gift button.
+
+To code fruit "flying" from one gardener to another (and also like/dislike
+icons), started work on FlyingObject class.
+
+Envision World managing a series of flying object animations across multiple
+passTime calls.
+
+
+
+July 25, 2006
+
+Got flying objects and AI working for fruit exchange.
+
+Got flying emotion icons working.
+
+
+
+July 26, 2006
+
+Got actions based on emotions working (encroachment and gift giving).
+
+Pretty much done with Iteration 2.
+
+Todo:
+X-Update How To Play document.
+X-A bit more testing and tweaking. (none needed)
+
+
+
+July 27, 2006
+
+Should be no changes for build process.
+
+Tagging all files as   game2_iteration_2
+
+
+Now onto iteration 3.
+
+So far, interactions with other gardeners do not have consequences.
+
+For example, you can sit by yourself, working in your own plot, and "do well"
+in the game, living for five minutes or more.
+
+Being a loner should be a possible strategy, since I want to build a game where
+there is no one "right answer."  However, there should be some trade-offs 
+involved in picking the loner approach.  Right now, it might be the sole 
+optimal strategy.
+
+There are two places to go from here:
+
+1.  Add offspring into the picture, with friendships leading to mating, and
+    each offspring representing another chance for the player.
+
+2.  Add variable fruit nutrients (some simple plant genetics, soil types, 
+    etc.), which will make friendship useful for facilitating trade. 
+
+I think option 2 is better, since it will let me explore the core social 
+gameplay mechanic without it being obscured by offspring.  The game should
+be "fun" and interesting in its "single round" incarnation without offspring.
+
+
+
+Got variable soil done.
+
+Started work on seeds. 
+
+
+
+August 3, 2006
+
+Did more work on seeds and plant genetics.
+
+Crashes when fruit harvested.
+
+
+
+Autust 6, 2006
+
+Fixed crash.
+
+Got nutrients working.
+
+Nearly done with Iteration 3.
+
+Still to do:
+--Tweak a bit
+X-Make all plots visible
+--Update how-to documentation.
+
+
+
+August 7, 2006
+
+Simplified nutrition:
+
+--Each fruit now only high in one nutrient (and low in others).  Thus, fruits
+  nutrients can be distinguished easily (it is hard for us to see
+  yellow as "high" in both red and green, or light pink to be very high in
+  red and pretty high in both blue and green---we do not understand color 
+  mixing on a subconscious level).
+--Got rid of energy bar.  Now all nutrient bars drop together.
+--Got rid of energy consumption rate increase with aging.  Now life time
+  is a fixed length, and low nutrient levels simply accellerate aging.
+
+These changes simplify the gameplay and make the game easier to understand
+without changing fundamental dynamics.  These changes amount to getting rid
+of unessessary, tedious details. 
+
+Next:
+
+Simplify soil parameters (go from continuous to binary).
+
+Did this.  Again:  much better.
+
+
+Next:
+
+X-Update AI to deal with nutrition and better deal with soil types.
+X-Take nutrition into account when giving gifts.
+X-Some computer-controlled gardeners should take gifting initiative.
+
+
+
+August 8, 2006
+
+IGF deadline in one month.
+
+Forget about AI paying attention to soil types for now.
+
+
+Note that if a gardener is very busy watering (for example, if its plot
+is far away from the water source), it never has the opportunity to give a 
+gift.
+
+The AI code has hard-coded prioritization:  make sure we're not hungry,
+then make sure we have 3 plants, then make sure they are watered, and *then*
+give gifts or take revenge.
+
+In future, this should be rewritten to have dynamic prioritization.  Thus,
+given our current state, we compute a priority score for each possible action
+and then pursue the action with the highest score.  For example, if we *really*
+like a neighbor, we may put off watering our plants to give a gift.
+
+The genetics of an individual can also play a role here.
+
+
+Done with iteration 3.
+
+Tagging all files as   game2_iteration_3
+
+
+
+Still nothing forcing gardeners to interact.  Nutrition doesn't feel like
+enough.  There is also no space constraint that makes you *want* to exapand
+into other gardeners' plots.  Right now, plants can be placed very close 
+together.
+
+Solution 1:
+--Add constraint so that plants cannot be planted close together.
+--After a plant is grown in soil, soil remains infertile
+  --What would balance this out?
+  --Do we want the game to eventually end because of scarce soil resources?
+  --It would certainly force gardeners to interact and fight (over last
+    pieces of fertile soil) but only eventually.
+
+Solution 2:
+--Plants are permanent (in other words, trees).
+--They cannot be planted close together.
+--They must be watered until they reach maturity
+--Then they produce fruit periodically.
+
+With solution 2, if you plant a bunch of trees of the same type in your plot,
+you will eventually need to expand your plot to make room for trees of other
+types.  Also, you could try to "take over" the established trees of other
+gardeners.
+
+New gardeners coming to island will need to fight for empty space to plant
+trees or try to take over existing trees.
+
+Eventually, could add an action for cutting down a tree to make space.  Maybe
+this could tie into the idea of "making a boat" to send offspring to central
+server.  What if land forever infertile after you cut down a tree?  Then
+there is balance between farming and boat-building needs.  But this doesn't
+help us make room for growing new plant varieties.  Maybe soil infertile for
+a short period after cutting down a tree.
+
+In next iteration, add basic Solution 2.
+
+
+Another issue:  game screen is very chaotic with too many gardeners moving 
+around.  It is impossible to follow.  Should probably reduce size of island
+and reduce to 4 other gardeners.
+
+
+
+August 11, 2006
+
+Reduced num gardeners and island size.
+Made plants permanent and added a minimum planting distance.
+Started work on Genetics.
+
+Next:  test genetics by re-implementing plant parameters using Genetics class.
+
+
+
+August 13, 2006
+
+Got genetics working for plants.
+
+
+Started work on pregnancy --- maybe done.
+
+Working on mating.
+
+Idea:
+
+--Mating handled by world (mateGardeners)
+
+--Flying objects in both directions. 
+
+--When they reach their destinations, they trigger pregnancy.
+
+Hey... would be "cute" if after birth, a baby gardener followed you around for
+a while as it grew.  During that time, half of all food eaten given to baby.
+Think about this.
+
+
+August 14, 2006
+
+Got flying objects for mating and mating button.
+
+Next:  
+X-visual representation of pregnancy progress
+X-Limits on mating based on social factors
+X-AI-triggered mating
+
+
+August 15, 2006
+
+Next:
+X-Upon death, player takes over next offspring.
+X-Finish discard button implementation.
+
+
+
+August 20, 2006
+
+Tagging all files as   game2_iteration_4
+
+
+Next iteration:
+
+General tweaking, improving graphics, etc.
+
+Game should be playable throughout, so no need for iterative process.
+
+Also need to be thinking about a name so that a SF website can be set up.
+
+
+Working on graphics for growing plants.
+
+Space for plants:
+--Leaf color
+--Leaf shape.
+--Leaf size.
+--Number of "joints" on main stem axis
+--Number of branches at each joint
+--Length of branches
+(each branch has leaf at end)
+(Upper branches are shorter than lower)
+--Fraction of branches that bear fruit
+(Fruit appears at end of branches)
+--Fruit nutrition (color)
+--Fruit shape
+--Fruit size
+
+
+The hard part here is the "shape" for leaves and fruit.
+
+Could be arbitrary polygons, but cannot be filled properly unless convex.
+
+Single triangles seem too crude.
+
+What about textured quads?
+
+Each plant could have parameters that specify (somehow?) which points on a 
+small texture map are filled and which are transparent.
+
+ooooooooooo 
+oooooxooooo 
+oxooxxxooxo 
+oxxxoxoxxxo 
+oooxxxxxooo 
+ooooxxxoooo 
+oooooxooooo 
+
+
+So, each leaf or fruit would be represented by one "particle" polygon (or 
+a pair of polygons---see subreal source).  Use quads for now.
+
+
+Okay... now how do we fill the textures?
+
+Maybe with pixel-laying "walkers" that spawn other walkers?
+
+Look at substitution systems on page 402 of _A New Kind of Science_
+
+Need to simplify so that it can work iteratively on pixel level.
+
+
+Idea:
+
+--Start out with a line of pixels through center of image.
+--Mark the line with "special" pixels every n pixels.
+
+a = starting angle;
+b = angle increment
+l = starting length
+dl = length increment
+
+While l >= 1 pixel: {
+
+--At each special pixel, make pixel not special and then draw a line at angle 
+  a for l pixels
+--Mark new line with new speical pixels every n pixels
+
+a = a + b
+l = l - dl
+}
+
+
+
+Got version of this done with GL line drawing.  Seems too slow (each leaf
+has lots of lines).
+
+Also working on version with textures for each leaf.  Much faster, and
+may even look better.
+
+For some reason, the rotation is screwed up in the texture version.
+
+
+
+August 21, 2006
+
+Fixed problem with rotation of texture quads.
+
+
+Got IFS leaf generation in place.  Works well with hand-selected parameters,
+but generally does not produce very interesting leaves with random parameters.
+
+Also, IFS can only mimic certain natural forms (like maple leaves and ferns).
+Something like an elm leaf (oval with teeth) would not be possible.
+
+Another idea:
+
+Start with seed pixels (in gene-parameterized locations) and "grow" from them,
+filling in neighboring pixels, until a solid leaf results.
+
+Various growing rules could result in a variety of small-scale leaf fetures
+(for example, does a pixel become filled if it has exactly one filled neighbor,
+which would result in "branchy" leaves, or when it has at least one filled 
+neighbor, which would result in "blobby" leaves).
+
+We could also specify, with genes, that the filling rule changes after a
+certain number of steps.
+
+
+
+August 22, 2006
+
+Cellular leaf growth seems promising.
+
+Changes from Wolfram:
+
+--Look at all pixels in a circular neighborhood when counting filled neighbors.
+  This reduces the "grid effect."
+
+
+
+Random seed pixels not very interesting, since CA pattern dominates appearance.
+
+More interesting idea:
+
+A "walker" that lays seed pixels while previously-laid pixels have already
+started growing.  Walker could spawn (branch) other walkers periodically.  Tips
+will have less growing time.
+
+Thus, we could get maple-leaf-like shapes, as well as lots of other shapes.
+
+Walkers could always start from center of image and move outward.
+
+Leaf becomes "finished" as soon as a filled pixel hits an edge.
+
+
+
+August 23, 2006
+
+Working on cell walkers.
+
+Looking great!  Lots of beautiful forms (like spirals, tendrils, etc.)
+
+Upon a "branch", a walker spawns one other walker.
+
+Could add parameter to control how many other walkers are spawned at each
+branch.
+
+To do:
+
+X-Tweak parameter range so that interesting shapes are generated most of the 
+  time.
+
+X-Integrate with cellular growth to "fill in" skeletons created by walkers.
+
+
+
+
+August 24, 2006
+
+Getting some very beautiful leaf shapes.
+
+Commit now, and then tweak some more.
+
+
+Tweaked some more, found that original walker params are best, and that
+simplest post-walker cell expansion is best (if one or more neighbors are
+filled, become filled).
+
+Lots of leaf shape variety (due to walker paths).  Very nice.
+
+To do:
+
+X-Clean up code.
+X-Improve color gradients (should leaf colors be genetic?)
+x-Map current hand-coded parameter range into plant genes.
+
+
+
+August 27, 2006
+
+Got genes-to-leaf-shape mapping working.
+
+Strange problem:
+
+Same seeds (and genes) sometimes generate different leaf shapes.
+
+Doesn't happen with test program.
+
+Doesn't happen when LeakTracer or ElectricFence turned on.
+
+
+Have a hard-coded random seed parameter that causes it to happen.
+
+First walker sometimes goes 46 steps, and sometimes goes 40 steps.
+
+When it goes 46 steps, a total of 12 walkers are present at end.
+For 40 steps, 14 walkers are present.
+
+Idea:  must have something to do with data from uninitialized memory.
+
+Both LeakTrace and EFence init all memory with constant values, so they
+would cause it not to happen.
+
+Some place in walker code, we are relying on uninitialized memory.
+
+
+Fixed it!
+
+Two parameters were not being set in spawned walkers:
+mSpawnIntervalFactor and mSpawnDouble
+
+Setting them fixes the variable leaf shape problem, but also might make
+leaf shapes less interesting (particularly the mSpawnDouble one, since
+those that spawn double now produce a ton of walkers and a very crowded leaf
+pattern that dies out quickly before expanding far).
+
+Can tweak this later.
+
+Tweaked a bit (and also fixed win32 bug) by putting lower limit on 
+mSpawnInterval of 2 (it used to sometimes go down to zero).
+
+
+Still to do for plant graphics:
+
+X-Turn z-buffering on so that nearby plants overlap correctly.
+X-Make start angle for joints random instead of zero (right now, each
+  plant of same type starts out at same angle, so they look "regular")
+--Other genetic parameters (z height, for example)?
+X-Some kind of central stems (right now, plants are hollow)?
+X-Make leaf shape meaningful (small leaf area consume less water to grow but
+  produces fewer fruit...).  Need to measure leaf area after growing it with
+  walkers to do this.
+--Flowers (on stems between leaves?)
+--Fruit
+
+
+
+August 28, 2006
+
+Z buffering won't work for plant parts, since leaves use transparent textures
+(so sorting is necessary anyway).  So, implemented a hack sorting mechanism 
+instead (draw lowest layer of all plants, then next layer, etc.)
+
+
+Working on plant joint cap to hide hollow center.  Looking better.
+
+
+Bugs:
+X-Leaf color "jumps" suddenly as soon as partial joint is done."
+X-Segfaults upon exit after fruit has appeared (segfault in Genetics 
+  destructor).
+
+Plant joint cap looks fine.
+
+
+Ideas for flowers:
+
+--Radial array of petals.
+--Each petal a single triangle with one vertex at flower center.
+--Positions of other vertices based on genetics
+--Color of vertices based on genetics
+--3 to 8 petals (genetic)
+--Circular center part of flower can turn into fruit
+
+
+Flower opening:
+
+--Actually, "center" vertex should be sitting on border of flower center part.
+--Other two vertices for petal can morph from flower center to their positions.
+--While morphing, then can change from a greenish color to their genetic color
+
+--This won't work:  center petal vertex will still be on border of center part,
+  instead of behind center part, after petal fully opens---won't look good.
+--Instead:  have petals grow out from behind center part.
+
+
+Bud forming:
+--Can simply increase in size, from zero, with all petals "hidden" behind 
+  center part.
+--After bud reaches full size, flower opens
+
+
+Somehow, flower should turn into a fruit.
+
+What will fruit look like?  What shape?  Made from polygons?  Maybe just a
+shaded circle?  Made with some kind of walkers (like leaves)?
+
+If fruit is irregular shape, how to make it look "right" coming out of a flower
+that is facing straight up at the camera?
+
+Leaf area should dictate speed of fruit production.
+
+
+
+August 29, 2006
+
+Got genetics-based flower shape and gradual flower growth working.
+
+To do for flowers:
+
+X-Flower placement (thinking about placing on each leaf's "first walker"
+  terminal spot).
+
+X-Stagger multiple flower growths on same plant (how?  timing?  some kind
+  of genetic parameter that controls time spacing of new flower buds)
+
+--Fruit from flowers... how?
+
+
+
+August 31, 2006
+
+Possible name:  Seeds
+(still available on SF).
+
+Think about it for a day or so.
+
+
+Worked on textures for petals instead of pure polygons.
+
+Got flowers placed on leaf terminii.
+
+
+Problem with petal textures:
+Currently using circular texture (same as for flower center).  But petals are
+triangular, so circular texture is cut off and distorted.  Outer tip has smooth
+edge, but side edges are sharp lines.
+
+Better:  A texture containing a triangular image with one triangle point near
+the center of the bottom edge and the other to points near the opposite corners
+(I use "near" here because texture should be blurred, and we need to leave
+room for that).  Then we can anchor our triangular polygon at the center of
+the bottom edge and at the two opposite corners.
+
+How to fill such a texture:
+
+Set all pixels to white.  Alpha set by walking through from top and "shrinking"
+filled line length a bit at each row (set shrink factor so that we hit zero
+near the bottom center point)
+
+
+September 1, 2006
+
+Got better texture in place for petals:  Looks great.
+
+Problem:  many petals too narrow.  Gene mapping makes this likely.
+
+New gene:  Petal angle.
+
+Petal point A and B angles now relative to the main petal angle.
+
+Did this.  Much better. 
+
+
+Another name:  Isolation
+
+
+Idea for fruit shapes:
+
+Combine circle with a sine-based function to determine the radius of the circle
+a various points around the circle.
+
+
+Got fruit shapes, and fruit growth mostly working.
+
+
+September 2, 2006
+
+To do:
+X-Fix so that green is not a nutrient color (blends in with leaves and unripe
+fruit colors)  Yellow should be a nutrient color instead (or another color?)
+X-Make fruit drawing rotation-aware
+X-Re-implement fruit harvesting (old code handles only one ripe fruit)
+  (maybe use flying objects?)
+X-Map fruit progress rate from genetics
+X-Figure out what to do once fruit reaches full rot.
+X-Get rid of flowers after fruit grows.
+X-Tie fruit ripening time to leaf size (big leaves -> fast ripening)
+
+
+
+September 3, 2006
+
+
+Names:
+Seeds
+Tendril
+Tendrils
+Isolation
+Calyx  (too hard to pronounce)
+Cultivate
+Culture
+Propagate
+Encroachment
+Ephemeral
+Entwine
+Epiphany
+Equilibrium
+Equinox
+Esoteric
+Esoterra
+Essence
+Etiquette
+Eventually
+Exotic
+Extinct
+Fabric
+Fertile
+Flower
+Inorganic
+Artificial
+Simulated
+Unnatural
+Stem
+Branch
+Branches
+Radiate
+Raise
+Harvest
+Reciprocity
+Symbiotic
+Synthetic
+Synthesis
+Sympathy
+Empathy
+Tendrils and Thorns
+Thread
+Roots
+Tension
+Plant
+Transplant
+Ultraviolet
+Unison
+
+Idea for gardeners:  collections of hollow boxes.  Twist to show anger, expand
+to show friendship.  Hollow box texture.
+
+Another idea:
+Overlapping scales.
+
+
+Stack of polygons (rectangles?) at various rotations and scales.
+
+Problem: can't see most of gardener this way (interesting genetic variety?)
+
+
+Scale idea best.
+
+First, lay down a blurry circle of a given color to represent gardener.
+
+Then have a walker, with genetic path parameters, that starts at the center 
+of the gardener and lays scales as it goes.  Walker "bounces" off the edge
+of the underlying circle.  Walker dies after laying a set number of scales.
+Scales can change size and color (based on genetics) as walker goes along.
+
+Finally, top gardener off with cartoon eyes and three colored spheres to show 
+nutrients.
+
+Got this working, pretty much.
+
+Have scales rotating in unison... looks good.
+
+
+To do:
+--Switch from hard-coded parameters to genetic parameters
+--Graphics for eyes (gentic eye shapes?)
+--Graphic for nutrients
+--Graphic for carrying water
+--Graphic for pregnancy
+--Make gardener motion rotation-aware
+
+Think about representing emotions with scales and eyes
+
+
+
+Currently leaning toward the following name:
+
+Cultivate
+or
+Cultivation
+
+
+
+September 4, 2006
+
+Settled on "Cultivation" as name.
+
+Registering with SourceForge.
+
+Public description:
+Cultivation is a video game about the social and biological interactions 
+within a gardening community.  The resources necessary for genetic propagation
+are tight, and relationships can become tense.  Cultivation explores the 
+balances of self-interest, the common good, conflict, and compromise.
+      
+Too long (296 char, limit 255)  New:
+Cultivation is a game about the interactions within a gardening community.  
+The resources needed for genetic propagation are tight, and relations can 
+become tense.  Cultivation explores self-interest, the common good, conflict, 
+and compromise.
+
+
+Full description:
+Cultivation is a video game.  I am developing it using platform-independent 
+C++.  Graphics are output through the OpenGL library.  System requirements 
+to play Cultivation are quite reasonable:  a 3D card that supports OpenGL and
+a 200 MHz CPU. Cultivation development is nearly complete.  I have been storing
+the source code in a temporary CVS location:
+
+http://hcsoftware.cvs.sf.net/hcsoftware/tempProjects/game2/
+
+Why is Cultivation unique?
+
+This is a game about a community of gardeners.  It is both a social and
+biological simulation.  You control one gardener in the game, and the other
+community members are controlled by the computer according to their genetic
+parameters.  You and the other gardeners plant seeds, care for the resulting
+plants, and harvest fruit.  Plants can be selectively bred to isolate 
+desirable traits. Land space is limited and must be divided among the 
+gardeners.  Gardeners can claim overlapping plots of land.  In these conflicts,
+social factors like compromise and revenge come into play.  Social tensions 
+can be eased, and friendships built, by giving gifts.  Friendships can 
+culminate in mating and the production of offspring.  Your gardener's lifetime 
+is limited, but your can continue playing by controlling your offspring after 
+your gardener dies.
+
+Cultivation is also graphically unique.  All graphics are procedurally 
+generated, and no binary texturemaps or other bitmaps are shipped with the
+game.  Plant leaves and flowers, as well as the gardeners themselves, come
+in a virtually limitless variety of appearances, governed by their underlying
+genetics.  Growth patterns and behavior are also controlled by genetics, so
+each new game presents slightly different strategic challenges. One side effect
+of procedural generation is that the Cultivation executable is incredibly 
+small.  All of that variety fits easily onto a single floppy disk without 
+compression.
+
+Why did I develop Cultivation?
+
+I was trying to devise a game where there was more than one "right answer" or
+winning strategy.  I wanted to explore conflicts that are more subtle than
+the violent conflicts portrayed in most modern games.  I think that Cultivation
+succeeds in this direction.  Your behavior in the game is up to you.  Will
+your survive through hard work, planting and growing your own fruit, or will
+you simply free-load and steal from others?  What will you do when a 
+neighboring gardener encroaches on your plants and steals your fruit?  Will 
+you back off, giving up the plants and moving elsewhere, or fight back by 
+stealing in return?    
+
+
+Selected Public Domain license (gulp!)
+
+Submitted to SF September 4, 2006 at 11:25AM.  Check status here:
+
+https://sourceforge.net/my/myprojects.php
+
+No email notice given (why not??)
+
+
+Back to work.
+
+
+Better for gardeners:
+--Rows of scales (walker goes back and forth across gardener base laying 
+  scales)
+--Only differences between gardeners are in scale rotations and colors?
+
+
+Did this.  Looks pretty good, but looks very regular (rows).
+
+Maybe should modulate rows with sine waves...  Did this, looks better.
+Sine params can be genetic.
+
+
+Added a bone overlay and a skin overlay.  Looking rather animal.
+
+Bone shape/layout genetic... working on this.  
+
+Got this all geneticized.  Time to work on eyes.
+
+
+Got eyes looking pretty good (with emotion display)
+
+Working on gardener rotation.
+
+Still need to add rotation support to World
+
+Got this working.
+
+
+September 6, 2006
+
+Todo:
+
+Graphics for:
+X-Water carrying
+X-Nutrition
+X-Pregnancy
+X-Aging (idea--- organs turn black...)
+
+
+Next:
+After birth, offspring should follow you and glean nutrients (every time
+you eat, you give half to offspring).
+
+Offspring doesn't age, but keeps growing.
+
+Got following working.
+
+Next:
+Nutrient sharing for following offspring (and see FIXME in Gardener).
+
+Did this. Seems to work.  Still need to test a bit more.
+
+Also, noticed a Segfault on exit after taking over an offspring.
+
+
+September 7, 2006
+
+Tested nutrient sharing, and tweaked nutrient rates more.
+
+Testing for leaks.
+
+Found a leak in rare circumstance (seems to happen when someone mates
+with you after death... the offspring is never destroyed... why not?  Hard
+to reproduce.)
+
+Following offspring:
+X-Shouldn't be able to give gift to them or mate with them.
+
+
+Next:  better plant water status
+
+Got it.
+
+
+Next: Better island graphics.
+
+
+idea:  island radius (circle) modulated by landscape function
+
+Simplest collision detection:  if gardener's next timestep goes outside of 
+boundary, abort that step and truncate gardener's desired position.
+
+
+Making progress here.
+
+
+September 8, 2006
+
+Actually, limiting gardeners to boundary of island in this way won't work,
+since gardeners get stuck on peninsulas when they try to walk "across" an
+inlet.  This is a pain for human-controlled gardeners, and it won't work
+at all for AI-controlled gardeners.  No time (nor desire) to implement path-
+finding.
+
+Two ideas:
+1)  Gardeners can walk anywhere, but know to plot/plant only on land.
+2)  Simple "route around" obstacle avoidance in World::passTime.
+
+Limit:  spend at most 10 minutes on 2) before giving up and reverting to 1.
+Deadline 6:08 am.
+
+Okay... got 2) somewhat working.  Works pretty well most of the time, but
+still gets stuck sometimes.  That will never be okay for AI.  So, revert to 1.
+
+Excellent self-control (not going off on this tangent too far).
+
+Anyway, it helped to test that the boundary functions are actually working.
+
+
+To do for island graphics:
+X-Change to use seed based on time for island shape and terrain.
+X-Add getInBounds function to soil map for testing boundary.
+X-Blur the soil map graphic a bit (right now, it has linear interp artifacts)
+X-Add getClosestBoundary function to aid GardenerAI in fetching water
+X-Change so that water can be fetched from anywhere along boundary.
+X-Add a grit overlay (multi-pass, to avoid seeing tiling?).
+
+
+Checked for memory leaks.
+
+
+Next:  polish UI.
+
+--Highlight targest of actions when mouse hovers over button.
+
+First, work on water button.
+
+
+Finished with:
+--Plant button
+--Water button
+--Harvest button
+
+Next:
+--Eat button (how?)
+
+
+Pac-man icon (the only thing I can think of)
+
+
+Eat button looking good.  Gift button?
+
+Done (arrow with object to give, plus recipient highlight).
+
+
+Next: panel color
+
+Done.
+
+
+Next:  Mating button
+
+Done
+
+Next:  Remove clock
+
+Next:  
+
+X-Let "ghost" walk around after death.
+X-Make discard button nicer
+X-Make quit button nicer.
+
+Better:
+Start with several seeds, each one is used up when planted.
+
+Got everything but AI tweaks in place.
+
+Time to work on submission.
+
+Got submission in.
+
+Got builds made for all platforms and posted to web.
+
+Whew!
+
+Tag as cultivation_0
+
+
+
+September 12, 2006
+
+
+When testing on a fast computer, found these bugs:
+
+Mating, when triggered by AI:
+
+--Multiple offspring flyingobjects go at once. Mater is trying to mate over 
+and over as long as isPregnant is not set on the recipient. What happens when 
+all of those offspring objects arrive? Who deletes them? Maybe this was the 
+mysterious memory bug. Easy fix (same as for gift giving): 
+timeSinceLastMating... mate at most once every 5 seconds.
+
+--As soon as an AI's pregnancy is finished, it goes back to mate with you 
+again and *succeeds*, replacing (??how??) your existing offspring.
+
+Everything else is very smooth and nice. Should fix these pregnancy bugs, 
+though, 'cause they are showstoppers...
+
+
+Looking at GardenerAI, see that we never check if our mating partner is 
+pregnant.
+
+Fixed this.
+
+Fixed the multiple "machine gun" mating bug too.
+
+Test this---if it works, should build and post an update ASAP.
+
+Note:  the packaging tool for Windows is the FreeExtractor Wizard.
+
+
+Seem to be ready to release v1.
+
+Don't tag yet.  Test extensively on a fast computer first... look for other
+bugs like this.
+
+Built tentative v1 releases already for Windows and Unix, though.  Posted
+to NCN server.
+
+
+September 13, 2006
+
+Other tiny bugs, might as well fix:
+
+X-Flower petals can still be too narrow.
+
+X-Leaves look pixelated on larger screens. Blur all channels??
+
+
+Build a new tentative v1 release.
+
+Tag as cultivation_1
+
+
+
+
+September 14, 2006
+
+Starting work on next version.
+
+Idea:
+There needs to be more of a consequence to getting another gardener angry.
+Something that goes along with the idea of "everybody loses"
+Current idea:  destroy neighbors plants, rendering the land around the plant
+unusable forever.  After enough fighting, entire island runs out of plantable
+land, and everyone dies.
+
+Also, need to work on music.
+
+Simplest idea:  A music manager that recieves a "song" from each gardener.  The
+song specifies notes to play in a given order on a fixed time grid.
+
+Suppose the songs are 20 seconds long, and we want a time grid with 4 ticks per second.  Each song is then made up of 80 "notes".  A note has a pitch and a duration, and can also specify silence.
+
+ 
+Copied sound framework from Transcend.
+Got it to compile and link into Cultivation framework.
+
+Now need to work on MusicPlayer.
+
+
+
+September 17, 2006
+
+Got stereo music placement working.
+
+Got songs fading with age.
+
+
+
+Next:  need to derive songs from genetics.
+
+Twins should play same song, offspring song should be combination of parent
+songs.
+
+How?
+
+September 18, 2006
+
+One idea is for each gardener to have two music parts, one for when standing
+still (slower notes) and one for when moving (faster, shorter notes).
+
+If we can guarantee that, in the wave table, the shorter notes have higher
+indecies in the note length vector, then we can simply specify a "length 
+factor" when we construct each music part.
+
+We could also think about switching from lower to higher notes, maybe when
+carrying water?
+
+So, we could have four music parts, selected by the binary states of two
+factors:
+
+--moving?
+--carrying water?
+
+Melody encoded with genetics:  Each gene value selects a pitch from the note
+table.
+
+Genetic cross would involve selecting each of these four for the offspring from
+a parent.
+
+Also, I'm feeling like the music is sounding very Transcend-like.  How can
+I make it different and more interesting?  Don't worry about this for now.
+
+What about reverse notes?
+
+Some kind of genetic flag?  Maybe one per note.  Thus, music encoded by 8
+gene vectors (two per part, one encoding melody, another flagging reversed
+notes).
+
+Actually, why not just have a single "chance of reverse note" flag per gardener
+that applies to all melodies?
+
+
+Problem with all of this:  no mixing or crossing of melodies.
+
+Maybe each melody should have two gene parts, one for the first half, and
+one for the second half.
+
+Better:  part A and part B, with a third gene vector indicating how they switch
+back and forth.  BAABB, something like this.
+
+Maybe the melody parts should be short, only a few notes long, and then we
+can let the part selector gene arrange them.
+
+Even better:  set of MelodyPool genes with more than two melody segments, 
+maybe A, B, C, D, E, and F.  Each segment 4 notes long.
+
+Then, we have four different part selectors for the four different states.
+
+We can flip high/low and fast/slow flags when generating the melodies for
+each state (to select a pitch range and note length).  
+
+Part selection genes should be long enough so that they can cover the full
+song length with the short notes.  I.e., if song is 20 seconds long, and short
+note is 1/8 second, and each part has 4 notes, part selector should specify
+a series of at least 40 parts.
+
+Maybe only have one part selector that is used over and over to generate each
+of the four "songs."
+
+
+Actually, most pleasant music seems to be made up of 0.5 and 0.25 notes, but
+we can tweak this later.
+
+So, in terms of new genes, we have:
+
+6 melody parts, each a vector of 4 doubles (4 notes)
+
+1 arrangement gene, with enough doubles to select parts to cover entire song
+
+1 gene specifying chance of reverse note.
+
+
+For now, let's make songs 20 seconds long, parts 4 notes long, and short notes
+0.25 seconds.  Thus, arrangement gene needs to be at least 20 parts long.  Make
+it 25 to be safe.
+
+Made changes to genetics.
+
+Change MusicPart so that it accepts a melody vector and fast/slow, high/low, 
+ and reverse note flags.
+
+
+Almost done implementing this.
+
+See FIXME in Gardener.cpp
+
+
+Got this all working, sounds good.
+
+Some tweaks:
+
+Having 6 melodies to pick from makes pretty complicated songs.
+
+Maybe song complexity could vary by gardener.  Nice to hook this into one of
+the other parameters.  Maybe eye size:  gardeners with big eyes and
+big pupils have more complicated songs.
+
+Did this, sounds good:  more complexity variety.
+
+
+Next:  quick addtion:  clouds
+
+Got them working.
+
+What about pixelating them for an interesting effect?
+
+Looks cool, but should I jump on this bandwagon?  More testing needed.
+See test code in World.cpp.
+
+
+September 19, 2006
+
+No, do not jump on the pixelation bandwagon.
+
+
+X Need to check for memory leaks.
+
+
+Next:  implement plant destruction.
+
+idea:  
+--black circle flies from gardener to plant.
+--Plant turns black over 1 second
+--Plant shrinks to nothing, except for its circle (speed up drawing)
+
+Got working w/out flying object.  Integrate into AI first and test that.
+
+Actually, since AI walks to plant before poisoning it, no need for flying
+object.
+
+
+Taking revenge by poisoning last tended plant of enemy.
+To do:
+X-Fix so that harvesting counts as tending
+X-Make sure that AI actually initiates poisoning if angry enough
+X-Fix AI planting spot choice bug.
+X-Add not to how-to.
+X-Add note to changelog.
+
+
+Almost ready for another release.
+
+But first:
+X-Make sure music loudness is correct no matter how many gardeners are present.
+X-Fix "rotate on arrival" motion bug.
+X-Thread safety issue:  MusicPlayer is running (on behalf of SoundPlayer) in
+  a separate thread.  What happens when it accesses the global world?  What
+  if a gardener dies and is removed while MusicPlayer is accessing that
+  gardeners MusicPart?
+X-Fix silent "gap" at end of song.
+
+Add a global lock that can synchronize between the two threads.  In the GL 
+thread,  we only need to lock around the main passTime call, since that
+is where our state changes.
+
+In the MusicPlayer thread, we lock around the entire getMoreMusic function.
+
+Did this.  Seems to make music less smooth on slower platforms.  How did this
+work with Transcend?  I guess I didn't think about it.
+
+
+Last step for Version 3 (Slamdance) is to redo the AI.
+
+Idea for AI:
+
+Priority-driven.  Gives each possible action a weight depending on urgency,
+then picks highest weighted action and does that.  The current AI uses
+hand-coded priorities.  For example, if there is ripe fruit, we always harvest
+before doing anything else, no matter how angry we are or how much we want
+to mate.  Thus, we can get "locked" into a harvest cycle (between two plants
+that ripen at the right rate) and never do anything else.  If we have plenty
+of fruit in storage, harvest should not be such a priority.
+
+When I say "possible actions" above, I don't mean specific actions, but 
+general categories of actions.  No stored fruit and fruit is ready to harvest?
+Then harvesting should be a priority.
+
+The various thresholds should be set with genetics (how much stored fruit
+is enough, how likely we are to become revengeful, etc.).
+
+
+
+Read for a Version 2 test release (try on a fast computer)?
+
+Seems to be there.
+
+Testing on slow (but 3d-card-equipped) PC, noticed bugs:
+
+X-Changing destination mid-move causes rotation to be way off.
+X-Music skips a lot.
+
+Fixed rotation bug.
+Improved music issue by reducing amount of code in GL thread that is locked.
+
+Testing again, noticed bug:
+
+X-Flowers/fruit don't shrink when poisoned.
+
+Fixed scaling, but positions of fruit/flowers still don't move toward center
+along with leaf terminii.  Also, flowers and fruit do not turn black.
+This might be okay, actually, 'cause it might look like plant leaves are 
+"dropping out from underneat" fruit/flowers.  Might be an interesting effect.
+
+Anyway, at least now they shrink into nothing instead of hanging there
+in full view and then suddenly disappearing.  Tested on faster computer.
+Looks good---abstract and odd.
+
+
+Fixed bug causing island shape to be the same after restart.
+
+Fixed bug that forced one of flower petal colors to be same as center color.
+
+Try Version 2 release again.
+
+
+
+
+September 20, 2006
+
+Fixed some MacOSX compile warnings.
+
+Testing on Mac (233 MHz), the sound skips a lot.  Tried disabling locks, and
+it doesn't help.  Reducing number of gardeners eliminates skipping.  So,
+it's a CPU speed issue.  Same on PC.
+
+Go with this for v2 release (if it doesn't skip on library computer).
+
+Added a proper icon for Mac version.
+
+Test windows version today, then post to SourceForge if it works.
+
+
+Testing on library computer.  Noticed two issues (to resolve in v3):
+
+X-Clouds just make everything hazier---they are hard to see.  Should increase
+  cloud alpha contrast so there are more "fully transparent" spots.
+
+X-Fruit highlighting sometimes incorrect when there are multiple ripe
+  fruits on a plant (harvested fruit differs from highlighted fruit... why?)
+  Looking at source, couldn't figure it out.
+
+X-Two gardeners, with overlapping plots, often get in a "mime loop" where they
+  both execute exactly the same actions at the same time.  This should be
+  fixed when the AI is re-written.
+
+X-Idea for AI:  probabalistic.  Each possible activity is given a weight,
+  depending on urgency, and those weights are normalized so that they sum
+  to 1.  The normalized weights are used like a probability distribution,
+  and a task is selected at random using this distribution.
+
+--Anger should propagate:  if you anger gardener A, and gardener B's most-
+  liked gardener is A, then B should also get angry.
+  Maybe it should work the opposite way (if B least likes A, then B should
+  get happy when A gets angry).  Social network.
+
+X-Idea for slower computers (and to smooth testing on my computer):  make each
+  fancier graphic feature optional.  Could have a features.ini file with a 
+  switch for each option (like "drawClouds", etc.).
+
+--You can get stuck carrying water if your plants are full-grown and you
+  have no seeds left.
+
+--Switch to 1/f melodies
+
+--Question:  Are clouds an improvement, or should they be dropped?  
+  They distract from the main view, certainly.
+
+Still, v2 is ready to go.
+
+Update HTML, then tag all as cultivation_2
+
+
+September 25, 2006
+
+Wasted day.  What a mess.
+
+Tried to improve cloud look... part-way through, but got stuck dealing
+with linear interpolation artifacts.  Thought they were random generator
+artifacts, spent tons of time testing various generators.  Added cosine
+interpolation to landscape.cpp from here
+
+http://freespace.virgin.net/hugo.elias/models/m_perlin.htm
+
+Need to finish adding it, see FIXMEs.  Need to tear out test generator code...
+
+Need to work on cloud stuff more in World.cpp
+
+
+
+September 26, 2006
+
+Optimizing landscape code.
+
+Having some trouble, but using macros, was able to reduce running time by 18%.
+
+Are multiplies slower than addition?  Not on a PPC.
+
+For all int operations tested (+, *, >>, and /), I saw about 20,000,000 ops 
+per second.
+
+Divide and mod were slightly slower, more like 12-15 million ops per second,
+but no twice as slow or anything.
+
+So, forget about avoiding division.
+
+Now, what about doubles?
+
+All operations on doubles and floats were comperable in speed to operations
+on ints (how could this be true?)
+
+One slower operation is conversion from an int to a double via a (double) cast.
+
+
+Hmmm... maybe we're actually measuring loop overhead instead of operation 
+times.
+
+Unrolling the loop 10 times, I see more of a difference, but still not a huge
+difference.
+
+Okay, enough distraction.
+
+Finished tweaking clouds.
+
+
+September 27, 2006
+
+Start work on features.ini file.
+
+Should probably be called features.txt so that windows users can edit it 
+easily.
+
+
+September 28, 2006
+
+Added more switches.  Works well (and increases the frame rate on my slow
+system).
+
+
+Ready to work on new AI.
+
+For now, implement only the behaviors that are present in the current AI,
+but with the new probabalistic model.
+
+Possible tasks:
+
+--Water  (the driest plant)
+--Harvest (one piece of fruit)
+--Eat (one piece of fruit)
+--Planting   (one new plant)
+--Expand Plot (for more space)
+--Capture neighbor's plant
+--Poison neighbor's plant
+--Give gift (one piece of fruit)
+--Mate
+--Rest (sit idle for some fixed time)
+
+Have state variable tracking current task.
+
+That task remains set until task complete (or until task fails)
+
+During each pass time step, we 
+--continue executing the current task
+--complete the current task
+--pick a new task and start executing it
+
+Thus, we can have a switch statement that selects custom code for each selected
+task (to water, we must first walk to water, then fetch water, then walk to
+the dry plant, then dump water).
+
+To pick next task, we compute weights for each possible task (using various
+factors---for example, if we have no fruit stored, Eat should be weighted
+zero).
+
+Then we normalize the weights so that they sum to 1.  Then we pick a [0..1]
+random variable and use it to pick a task (walking through the tasks,
+summing the weights, unil the sum surpases the value of our random variable).
+
+
+Started work on GardenerAI2.h and .cpp
+
+Got two tasks done.  Need to add the rest.
+
+
+Also, we can tweak each task weight with a genetic weight modifier.
+
+
+September 29, 2006
+
+Got all AI tasks implemented.  Seems to work (and perhaps better than old
+AI).
+
+There are two switch blocks.
+
+The first is used to select behaviors with a weighting scheme.
+
+The second is used to carry out the chosen behavior.
+
+At this point, the second block and be left alone.
+
+
+The first block can be tweaked in the following ways:
+
+X-Genetics should modify the weights for each task (we might be able to do
+  this elegantly with an array of gene names, so that we can modify
+  weights with a simple loop).  Perhaps genetic weights can range
+  from 0.5 to 2, so we can, in the extremes, cut chance of behavior
+  in half or double chance of behavior.
+
+
+October 2, 2006
+
+Got genetic behavior modifiers in place and working.  Rather elegant.  Nice.
+
+
+Right now, only user's gardener can back off and compromise.  Other gardeners
+can only expand their plots.
+
+Single gentic parameter:  overlap_tolerance
+If low, gardener is likely to give up and pick a new plot to avoid overlap.
+If high, gardener is likely to stick with overlap and fight it out.
+
+But how will this parameter interact with the "capture plant" behavior, when
+a gardener intentionally expands its plot into another's space?
+
+Maybe overlap tolerance should specify how much overlap can be tolerated before
+giving up... in terms of a percentage of gardener's plants that are co-owned
+by others.  Better:  in terms of percentage of land that is co-owned by others.
+
+Thus, a gardener might expand its plot to take revenge, but after several 
+expansions, give up and pick a new plot.
+
+
+First, should overhaul the plot selection algorithm.  Instead of trying to 
+be close to water and far away from gardeners, gardener can pick + repick
+until it finds a plot that meets its overlap tolerance.  Should have another
+genetic parameter that controls its desire for water proximity.
+
+Actually, should drop water proximity as a criteria for now.
+
+And, we can simply just pick any land-centered plot in the plot selection 
+phase.  We can always decide drop it in the behavior selection phase if
+it doesn't meet overlap criteria. 
+
+overlapTolerance can map to [0,1], since it is a fraction of our plot that
+overlaps with others.
+
+Need: algorithm for computing intersection of rectangles.  Get area of 
+intersection, compare to area of our plot.
+
+What if more than one plot intersects ours?  Computing the true overlap
+fraction would be difficult.  Instead, just sum the separate overlap areas.
+
+Find fraction of this sum over our plot area.
+
+Cap fraction at 1.
+
+So, overlapTolerance should map from [0,1.5] instead of [0,1] so that it
+is possible for some gardeners to tolerate 100% overlap.  How much above
+1 it goes determines chance of 100% tolerance ( [0,2] means 50% of gardeners
+are 100% tolerant, [0,1.5] means 33% are.
+
+What percent should be 100% tolerant?  how about 25% of them.  So it should
+map to [0, 1.33].
+
+
+Testing abandoning behavior.  It needs tweaking.  Since gardeners don't take
+overlap into account when picking a plot, they often abandon their new plot
+shortly after picking it and wander around, establishing plot after plot.
+
+Maybe they should only consider abandoning in the middle of fighting, or if
+they are making some other gardener angry.
+
+Maybe they can check if they are have least-liked status with any gardener,
+and then check if their overlap fraction with that gardener.  They consider 
+abandoning if they overlap too much with a gardener that is angry at them.
+
+Try this.
+
+Also, gardeners pick resting too much, even when there is work to be done.
+This makes for a boring game.  Turn resting off, except when there is
+no other task (make it the default).
+
+
+
+Found (whew!) a deadlock:
+Music thread locks globalLock while SoundPlayer's mLock is locked.
+World thread tries to manipulate SoundPlayer (thus trying to lock mLock) 
+through a call to setNumGardeners while it has globalLock locked.
+
+Only happens when numGardeners changes, so pretty rare, but it freezes the
+game when it happens.  Amazing to find it.
+
+Fixed it by putting a separate lock in SoundPlayer that protects the 
+MusicPlayer (so that mLock doesn't need to be set when SoundPlayer calls
+the MusicPlayer).
+
+Verified that fix actually solved problem by inserting a sleep that makes
+deadlock happen consistently with old code.  New code doesn't lock even
+with this sleep in place.
+
+
+Bug:  gardeners can still give to you when you are dead (in ghost mode).
+
+They may also react to you in other ways, too (like react to the position of
+your now-invisible plot).
+
+Added more checks to ignore dead gardeners---they should fix this problem.
+
+Last thing to add:  1/f music
+
+Actually, too difficult to add this in the current implementation.  So, skip
+it.  Still, should make sure we have a proper set of notes in place.  Existing
+pitches copied from level 001 of Transcend.  Probably should pick something
+different.
+
+
+Next:
+X-Make rest time genetic (right now, it's hard coded) (instead, reduced chance
+  of resting behavior)
+X-Anger propagation?  Maybe not---perhaps it's too complicated for player to
+  understand.
+X-Stuck-carrying-water bug (should be able to dump water back in ocean)
+X-1/f music
+
+
+October 3, 2006
+
+Pitches and frequencies explained:
+http://www.jhu.edu/~signals/listen/music1.html
+
+
+Optimization:
+--Improved inner loop of MusicNoteWaveTable (startup)
+
+Looking at calls to blendNoise1d
+
+During startup (with profiler), it is called 341378 times (getSoilCondition is
+called 4096 times).
+
+What about during first 30 seconds?
+
+getSoilCondition (and thus blendNoise1d) is called only sporadically after 
+that.  Don't worry about it.
+
+Seems like checking water boundary is called a lot.  May be some optimizations
+possible in the hot spots.
+
+Let it run for a while and profile it.
+
+
+After running for a while, getClosestBoundaryPoint was only called 38 times.
+At 2.63 ms per call, we could call it 380 times per second, so it is probably
+not hurting our frame rate.
+
+
+Giving up on profiling main game session.
+
+
+Turning debugging off cut executable size by 75% or so.
+
+
+Dumping water not smooth.  Fixed this.
+
+Final stuff for v3:
+X-Better music pitches (two octaves of c-major scale)
+X-Turn on profiling and test
+X-Optimize a bit using profiler
+X-Turn on full optimizations for final compile
+X-Dumping water not smooth.  Why?
+X-Update build scripts to copy features.txt
+X-Update how_to_play to mention features.txt
+
+
+Ready for v3 test builds.
+
+
+October 4, 2006
+
+Tested on a "fast" computer.
+
+Problems:
+
+X-Rapid-fire giving of multiple fruits.
+  Idea:  insert a 0.25 sec delay between all AI tasks.
+  Problem:  this still doesn't deal with additional gifts while first gift
+  is in-transit.  Gift criteria (to avoid back-n-forth giving) requires that
+  they have 2 less fruit than us, but while our gifts are in transit, they
+  may still have less fruit than us.  Maybe test for in-transit fruits?
+  Re-Implemented simple last-gift timer instead.
+
+X-Music volume rises as gardeners die off (gets very loud when you're the last
+  gardener).
+
+X-Instructions:  not clear that you only need to water plants until they
+  are done growing.
+
+X-Crash (when lots of partially-grown offspring were around)
+  Maybe due to an offspring's parent dying before the offspring was full-grown.
+  Looked in code---indeed, we don't deal with parentToFollow issues when 
+  we remove a gardener.  Fixed this (and tested it, was able to trigger crash
+  first with old code on linux.  Same situation did not trigger a crash
+  in new code).  
+
+X-Yikes... some gardeners' eyes are flickering and sometimes completely
+  invisible.  Saw it happen twice on optimized linux build.  Still trying
+  to catch it with debugger.  Not seeing it at all in build with debugging
+  on and opt off.
+
+X-If a gardener has no seeds left (and no living plants), it stalls, doing
+  nothing.  Perhaps it should try to take over other gardener's plants.
+  Actually, it will, if it is angry enough at the other gardener.  However,
+  it will leave "friend" gardener's plants alone and sit-n-starve.  This is
+  okay for now.  Leave it.
+
+X-Water fill-up can be jerky if water dumped before fill-up animation done.
+
+X-When approaching another gardener to give a gift or mate, gardeners should
+  stop moving once they get close enough to complete their task.
+  Right now, if they pick no other task, they keep their last desired position
+  set, so they end up right on top of you (if you are standing still) which
+  looks odd.
+
+
+For rapid-fire issue, try inserting a 1/2 second pause after each AI action.
+Didn't work, see above.
+
+Caught disappearing eyes with debugger.
+
+RGB Color:  230,17,162
+0.9019, 0.0666, 0.6353
+
+Yes!  Fixed it.
+
+
+Ready for v3a test build.
+
+
+October 5, 2006
+
+Testing 3a on mac, found that features.txt didn't work.  Fixed it.
+
+
+Finished final v3 builds.
+
+Put on 3 floppy disks.  Ready to mail to Slamdance.
+
+Mailed it on October 5, 2006.
+
+
+October 6, 2006
+
+Final testing good.  Still one crash on win32.
+
+Should tag as v3, but no time tonight.
+
+
+October 9, 2006
+
+Tagging all files as   cultivation_3
+
+Found source of Mac crash on exit:
+
+Accessing globalSoundPlayer after it has been destroyed (through 
+setNumGardeners when World is being destroyed).
+
+Fixed it.
+
+Still hearing "clicking" in music on MacOSX.  With a single gardener, there
+is no clicking.  With two, there is more clicking.  With more, there is even
+more.  Thus, it is a performance issue.
+
+Looking at Transcend docs, realized that sample rate for final game was NOT
+44100 Hz, but instead 11025 Hz.  Yikes!  Time to turn down the sample rate.
+
+
+
+October 10, 2006
+
+Last night, caught a crash on both Mac and PC.
+
+In SimpleVector<Gardener*>:getElementIndex somehow called from 
+Gardener:passTime (on Mac, debugging info not enabled, on PC, quit debugger
+by accident before doing a backtrace [due to the broken keyboard]).
+
+Today, recompiled Mac version with all debugging on and caught it (caught
+it on PC too):
+--We tell our parent to drop us as an offspring when we finish growing even
+  if our parent is NULL.
+
+Fixed this.  This is a pretty serious crash.  Should release a new version
+soon.
+
+
+Feedback from Alex:  too frustrating, because whenever you plant, some other
+gardener almost always expands its plot into yours.  They are too agressive.
+Also, some gardener almost always ends up expanding its plot to contain
+the whole island.  Not fair, since human player cannot do the same.
+
+X-Some limit on size of plot?
+--Some way to back off without abandoning entire plot?
+--Chance at beginning of game to pick how many other gardeners you want to 
+  start out with?
+
+Looking at getLeastLikedGardener, if we like all gardeners the same, then
+player's gardener (which is first on our list) will always be returned.  Not
+fair.  Fixed this.
+
+Added a plot dimension limit of 40.  This works better.
+
+Should get a new release out ASAP because of the fixed crashing bugs.
+
+Ready to test v4.
+
+
+Testing on a fast computer:  works great, no crashes, even after several
+generations.
+
+So, ready to release v4.
+
+
+Updating website stuff.  After posting release, tag files as cultivation_4
+
+
+October 12, 2006
+
+Alex says play is much better.  Played for many generations with no crash.
+Saw a crash after dying as the last one living.  Need to figure out why. 
+
+
+
+Promotion (sites that have reviewed/described Transcend):
+
+X http://www.happypenguin.org/
+  http://www.giantrobeast.com/strafingrun/minireview2.html
+  --only about shmups
+
+  http://indiegamedev.tucows.com/blog/_archives/2005/6/13/937737.html
+  --No post for more that 1 year
+
+  http://shootthecore.moonpod.com/Links/Pcshmups/Database/T.html
+  --Only about shmups
+
+X http://www.gametunnel.com/articles.php?id=346
+X http://www.4colorrebellion.com/indie-games/
+
+
+Other sites that do reviews, etc:
+X http://www.gamesareart.com/
+X http://jayisgames.com/
+X http://www.bytten.com/
+X http://www.arsecast.com/
+http://forums.indiegamer.com/
+X http://www.madmonkey.net/
+X http://www.gamehippo.com/
+
+
+General software sites:
+X http://freshmeat.net
+  project ID 61939
+
+
+Mini description:
+conflict and cooperation in a gardening community
+
+
+One-line description:
+
+A unique game that explores conflict and cooperation in a gardening community.
+
+
+Short description:
+
+Cultivation explores the social interactions within a gardening community.  You lead one family of gardeners, starting with a single individual, and wise choices can keep your genetic line from extinction.  While breeding plants, eating, and mating, your actions impact your neighbors, and the social balance sways between conflict and compromise.
+
+Extra paragraph for short description:
+
+Cultivation features dynamic graphics that are procedurally-generated using genetic representations and cross-breeding.  In other words, game objects are "grown" in real-time instead of being hand-painted or hard-coded.  Each plant and gardener in the game is unique in terms of both its appearance and behavior. 
+
+
+
+October 13, 2006
+
+Bug report from LinuxGameTome:
+
+I like the game. It gives me a segmentation fault, but works fine when run in gdb. In gdb it runs with >300 fps. Without gdb it should run even faster. Might that be the reason for the segmenatation fault? Athlon 2500+ ATI 9600XT Debian Sarge kernel 2.6.8
+
+Here is the backtrace:
+#0 0x08055647 in World::getAllGardenerPositions ()
+(gdb) bt
+#0 0x08055647 in World::getAllGardenerPositions ()
+#1 0x08074abe in MusicPlayer::getMoreMusic ()
+#2 0x0807666a in SoundPlayer::getSamples ()
+#3 0x08076a2f in portaudioCallback ()
+#4 0x0807a170 in Pa_CallConvertInt16 (past=0x8336700, nativeInputBuffer=0x0, nativeOutputBuffer=0x8336810) at pa_common/pa_lib.c:645
+#5 0x0807af69 in Pa_AudioThreadProc (past=0x8336700) at pa_unix_oss/pa_unix.c:650
+#6 0x40266b63 in start_thread () from /lib/tls/libpthread.so.0
+#7 0x4042f18a in clone () from /lib/tls/libc.so.6
+(gdb)
+
+
+
+Found and fixed this.
+
+
+
+"Bill Meltsner" <billmelt@gmail.com> liked the game, but always saw a poisoned
+island as the end result.  My ideas to fix this:
+
+ How many times did you play through to see that poisoned result?  If it 
+really happens every single time, and there's nothing the player can do to 
+prevent it, then there does need to be some adjustment.
+
+I don't think that fading poison will work, because I really wanted conflict 
+to have some serious consequences.  The problem is that the conflict can 
+happen between AI gardeners, which are out of the player's control.  What I 
+would like to think about are more ways that the player can influence the 
+behavior of the others... to sooth conflict somehow in order to prevent 
+disaster.  Right now, you can see two gardeners fighting, but you can't really 
+do anything about it.  Even if you are nice to them, the result will be them 
+liking you more, but they will still hate each other and fight.  It would be 
+interesting if there was something you could do, involving some kind of self-
+sacrifice, that would encourage them to stop fighting.  
+
+The fighting is caused by their overlapping plots, so what if you could create 
+a "tempting" new plot for one of them on the other side of the island and give 
+it as a gift?  Maybe it would need to have at least as many plants in it as 
+their existing plot for them to consider moving.  But that would take some 
+work on your part to construct (planting, watering, etc.), so it would be a 
+nice self-sacrifice.  I guess this could be easily accomplished (on my end, as 
+the dev) with a "swap plot" button.  It only is enabled when your plot 
+contains more plants than the other gardener (the gardener you are standing 
+near).  When you press it, you take control of the other's plot, and the other 
+switches to controling your plot.
+
+At that point, you would control the "conflicted" plot, and you could back off,
+or move away, or whatever to end the conflict.  
+
+Hmm... maybe the sacrifice should be even bigger.  Maybe you need to have twice
+the plants of the other gardener to make a swap happen... so you get a raw 
+deal, but you sooth the conflict, which might save the island in the long run.
+It should be a tough choice to make.
+
+
+Should release v5 now so that people get this important bug fix.
+
+Done.  Posting to Freshmeat.
+
+Tagging all as cultivation_5
+
+
+
+October 14, 2006
+
+problems    posted by  Anonymous  @ 62.254.128.7  on Oct 13 2006 5:28 PM         I'm getting reems of warnings like
+
+g++ -Wall -DLINUX -O9 -I../.. -I../../minorGems/sound/portaudio/pa_common -c -o sound/MusicPart.o sound/MusicPart.cpp g++ -Wall -DLINUX -O9 -I../.. -I../../minorGems/sound/portaudio/pa_common -c -o sound/MusicPlayer.o sound/MusicPlayer.cpp ../../minorGems/graphics/ChannelFilter.h:18: warning: ?class ChannelFilter? has virtual functions but non-virtual destructor sound/../userInterface/ObjectStorage.h:22: warning: ?class ObjectStorage? has virtual functions but non-virtual destructor
+
+and one final error of
+cp: cannot stat `game2/gameSource/Cultivation': No such file or directory Run Cultivation to play. 
+
+
+Fixed the warnings, there must be some other error preventing compilation.
+
+Ideas from "Bill Meltsner" <billmelt@gmail.com>:
+
+Usually, I try to back off to avoid conflict - I go to another part of the
+island and begin happily (albeit reluctantly) farming there. Eventually,
+however, the island gets so crowded that there is no place to go where I
+don't overlap - and then civilization begins collapsing. WE'RE ALL DOOMED!
+
+Certainly avoiding breeding like rabbits is a good strategy to help
+alleviate overcrowding, but then that has to be balanced with keeping your
+line alive - plus the AI gardeners appear to have a propensity for having
+babies.
+
+I agree that fading poison is probably a bad idea - I was just throwing it
+out there as an idea. I do like the idea of a "swap plot" command - however,
+as you mentioned, the issue of how much self-sacrifice is worth helping to
+cease the conflict is tough to balance. I'd like to see that command in-game
+- it'd be interesting to see how much longer society could continue with
+that possibility.
+
+My main problem with that idea is that it doesn't seem too realistic (and of
+course nutrients named after colors is totally lifelike!) - one idea I had
+was a "Make Peace" button (or something along those lines). Basically, if
+you're near two gardeners who have a negative relationship with each other
+(overlapping plots being the most likely cause), the button is enabled - you
+then basically tell the two gardeners to calm down, it's not that bad,
+sharing is caring, etc. Depending on how much each gardener likes you, they
+start liking each other more - basically, the more they like you, the more
+they take to heart your sermon on brotherly love.
+
+There could, however, be a "point of no return" (perhaps a few notches above
+"POISON ALL THEIR PLANTS BWAHAHAHAHAHA") that, once two gardeners reach it,
+there's nothing you can do to save their relationship. In fact, attempting
+to mediate the conflict results in them both disliking you more, as well as
+each other, causing the poisoning to happen that much faster. Also, if they
+don't like you enough, the same thing happens - if they don't have much
+respect for you, they'll just get angry at you for trying to stop them from
+fighting.
+
+
+
+
+October 17, 2006
+
+Coverage:
+
+http://pcburn.com/article.php?sid=1839
+
+"Unique games have a tendency to wash up on the Linux shores every so often. 
+Cultivation is one of the most unique to show up in quite a while."
+
+http://jayisgames.com/archives/2006/10/link_dump.php
+
+Considering it for a review, along with a bunch of other games (waiting for
+comments to decide what to review).
+
+
+Watch for comments here:
+http://forums.indiegamer.com/showthread.php?t=8745
+
+
+
+Thinking about adding some kind of overall, island-wide goal.  If you reach
+the goal before the game ends, you win.  For example, the goal might be to
+build a temple.  It might take several generations to do it.  Cooperation 
+might help with the goal, but will be necessary in general for basic survival
+through the project.
+
+So, what would be an interesting and fitting goal?  Something different and
+unique.  Building a temple probably isn't interesting enough.
+
+Also, keep in mind that we should avoid anything that only has one right 
+answer.  It should be possible to complete the goal without cooperating, maybe
+in a different way.  Multiple paths to reach the goal.  The interesting 
+question then becomes:  which path will you choose?
+
+
+Feedback from John Fink:
+"John Fink" <john.fink@gmail.com>
+
+> A pause button.  Maybe there's one already and I'm missing it.
+> 
+> Option to turn off poison, or some method to reclaim poisoned land.
+> 
+> A bigger map!  Or options to control the number of initial gardeners.
+
+More from JF:
+
+--Storage area is a pain to manage (my idea:  limit size, older items fall off
+  when it gets full)
+
+--Gardeners could work together to clean up poison.
+
+
+
+
+October 22, 2006
+
+Idea for an end-game goal:  portal.
+
+You have a mark, your offspring have the same mark.  Only you can build the 
+portal.  Poison destroys the portal... need to rebuild elsewhere.
+
+Some challenge to build the portal over several generations... not sure what.
+
+Then, the final challenge is to lead some gardeners into the portal.  Add a
+"follow" button that becomes active if a gardener likes you enough.  You must
+lead them into the portal without stepping in by accident yourself.
+
+Take as many as you want with you to be immortalized in the world of the higher
+power.  Last, you step into the portal, and it closes, stranding any other
+gardeners that you leave behind.
+
+They are immortalized in an output PNG file, maybe a combined picture of their
+souls (not a picture of them directly, more abstract, which is sized depending
+on how many are saved.  This is the reward for the player, sort of a badge of
+completion.
+
+Still many questions, but very interesting.  Draws connection between life
+in simulation and life in the "higher world", which in this case is our 
+physical world outside of the game.  Being immortalized just means being 
+captured in a work of art in the higher world.
+
+
+
+October 26, 2006
+
+More ideas about portal:
+
+Wherever you die first will start the first block of the portal.  Need to die
+there N times (N=4, maybe?) to finish the portal.  Poison destroys the portal,
+and dying somewhere else starts a new portal and destroys the current one.
+
+Portal grows very high into the sky, above the clouds, nearly touching the
+screen.  When it is complete, it animates somehow to show that it is complete.
+
+After portal is complete, you can use the follow button to lead gardeners into
+it (only those that like you a lot will follow you).  When you pass through
+the portal, it closes.
+
+Those that you save are immortalized in a souvenier image (and maybe an mp3 
+file?)  The image should show the abstract souls of the gardeners and not
+the gardeners directly.  Image size dictated by how many you chose to save.
+
+Hmm... maybe the follow button can also be used to prevent a pair of gardeners
+from fighting over and over.  By getting a gardener to follow you, you can
+distract it from fighting (and feed it to keep it alive, or whatever).  Thus,
+we might be able to get away without a "swap plot" feature, or whatever.
+
+Also, should there be a puzzle involved in building the portal?  Maybe a 
+breeding puzzle...  Like feeding it a gardener of a particular color makes
+the portal grow faster...
+
+No... think of puzzles that occur in chess and go.  Maybe a flipping puzzle of
+some kind.  Think of a randomly-generated lock.  Portal lock has multiple 
+blocks to it.  Some are lit up, some are not.  Dying in a particular block
+causes blocks to lite up and nearby blocks flip state.  Goal is to get them
+all lit up.
+
+To generate a puzzle, work backward from unlocked state:
+
+   X
+XXXX XX
+ XXXXX
+
+   X
+XXXX OO
+ XXXXX
+
+   O
+XXOO OO
+ XXOXX
+
+   O
+XOOO OO
+ OOOXX
+
+
+   O
+XOOO XO
+ OOOOO
+
+
+   O
+OXOO OO
+ OOOOO
+
+
+For now, just implement a simple portal.
+
+Passing idea:  suicide by eating a poisoned piece of fruit.
+
+Work on portal:
+See Portal.cpp.
+
+Idea:  
+
+When player's gardener dies, call World::augmentPortal
+  (checks for poison-free ground, 
+   if not on top of existing portal, destroys old portal (if present), 
+     starts new one
+   if on existing portal, upgrades it).
+
+Draw portal z levels along with plant z levels, and also interleave with 
+gardener z level.
+
+When plant poisoned, check if portal nearby, destroy portal.
+
+Got part of portal drawing working.  See FIXMEs in World.cpp
+
+Only seeing one level... why?
+
+
+
+October 27, 2006
+
+Fixed portal drawing.
+
+Got basic portal agmentation working.
+
+Got poisoned fruit working (to support suicide---avoid waiting around to die).
+
+
+
+October 30, 2006
+
+Fixed portal poisoning.
+
+Started work on following button and following genetics.  Still need to 
+implement action handling for click of follow button.  AI: similar to following
+a parent.  Should following be permanent?  Should we allow user to break off
+following?  Why not?  Following button could show a red "x" over it when 
+standing next to a gardener that is already following us.
+
+
+
+October 31, 2006
+
+Worked on following... got it working pretty much.  Still testing.
+
+
+
+Watch for FIXMES:
+X-fast pregnancy for testing
+X-low following threshold
+
+
+November 8, 2006
+
+Worked on portal graphics.  Got some pretty results.
+
+Each layer in the portal should take its parameters from the gardener that
+augments it.
+
+Layers should be extremely variable in appearance.
+
+Need two states for each layer:  active, and inactive.  Layers remain inactive
+until final layer is augmented, then they all become active.
+
+
+
+
+November 13, 2006
+
+Improved portal layer graphics with glyphs.
+
+Got rise-up animation working for portal passage.
+
+There are a some FIXMEs in place for testing.
+
+
+November 19, 2006
+
+Got soul trails looking very good.  Still a crashing bug, see FIXM
+
+
+November 20, 2006
+
+Working on PNG encoding.  No available implementation besides libpng and zlib,
+which are huge and cumbersome.... ugg.
+
+Looking at spec, just need signature, header, one IDAT chunk, and footer.  The
+hard part is the IDAT chunk, since the image data is supposed to be compressed
+in there using Deflate.
+
+Looking at the Image Library from here:
+http://www.colosseumbuilders.com/sourcecode.htm
+
+Downloaded to here:
+/data5/jcr13/downloads/imagelib
+
+
+
+November 21, 2006
+
+Got complete-hack-of-a PNG implementation written, mostly from scratch, 
+including the checksum code from the PNG and ZLIB specs.
+
+It writes only uncompressed deflate blocks (allowed according to deflate 
+spec).  Would be nice if it could output compressed blocks, but that is
+for another release.  A 2-gardener soul trail image is about 19KiB, which
+is not terrible.
+
+Idea:  eventually consider using real zlib implementation... only about 
+1000 KiB of code 
+
+
+X-Next:  used the nice "draw blur circle" code from soul trails to draw the
+portal glyphs.
+
+Consider ways to make leaves less blocky, too.
+ 
+
+November 22, 2006
+
+Leaves, exported to GIMP, look fine and not pixelated.  Maybe just look bad
+on 16-bit Voodo3 card.  Try it on Nate's
+
+Got smoother glyphs working... they look great.
+
+
+Sped up death after eating poisoned fruit.  No reason to keep player waiting.
+
+X-Noticed that some gardeners were giving the gift of poisoned fruit.
+  Odd, because they should be ignoring poisoned fruit when selecting a gift.
+  However, fruit-counting function was not ignoring poisoned fruit.  
+  Fixed this.
+  During testing, watch for gifts of poisoned fruit.
+  We should also disable the gift button for poisoned fruit on our end.
+  Fixed it too.
+
+
+Pretty much ready for a test release of v6.
+
+Still working on doc changes.
+
+
+November 23, 2006
+
+Got all doc changes in place.
+
+Reviews on GameTunnel suggested that tool tips would be helpful.  Added
+them (complete with my own hand-painted font texture).
+
+With tool-tips in place, decided to remove rant about instructions from guide.
+
+Checked for leaks.
+
+At this point, we have dealt with every problem that the critics have pointed
+out.  Good.
+
+Still need to do something about language selection.  Idea:
+language.txt file.
+
+Did it, and checked for leaks.
+
+
+When trying to open my own gate, found the "die away from gate and gate
+starts from scratch" rule annoying.  Changed it.
+
+
+
+November 24, 2006
+
+After many tries, finally was able to generate a large-ish soul trail image
+for the logo filling, but it was HARD.  Too hard.  Maybe need to tweak it a
+bit.  Fewer portal levels?  More controllable offspring (2 instead of 1 per
+mating)?
+
+
+AI jitters before giving gift if multiple gardeners tied for most liked.
+Problem:  getMostLikedGardener returns one at random to break ties.
+--Randomness good to spread gifts/hate out instead of focusing on one gardener
+  (often the player's gardener).
+--GardenerAI is stateless.  It picks the "gift" action, but then keeps asking
+  for the mostLiked as it executes that action.  Safe, because the first
+  mostLiked may die and be removed before the gift action finishes.
+  Thus, stateless AI is "safe"
+
+Solution:  keep one marked as mostLiked after we pick it the first time, but
+set it back to NULL if the like metrics change.  Thus, in the case of a tie,
+we pick one most-liked at random and keep returning it on calls to 
+getMostLikedGardener until something changes.
+ 
+Fixed this
+
+
+November 25, 2006
+
+Finished code for feeding followers.
+
+Ready for final play-testing.
+
+
+November 26, 2006
+
+Checked "feeding followers" code for memory leaks.
+
+
+Done building test v6.
+
+Still need to test all of them (especially the source distribution).
+
+Tool tips not working on mac. Fixed it.
+
+Noticed glyph_0.tga still being output.  Fixed it.
+
+Outside offspring of followers not being fed.
+
+Tested on a fast computer... everything looks good.
+
+Putting latest HTML online.
+
+
+Summary of changes:
+The game now has an eventual "win" condition:  open the gate to immortality and lead your fellow gardeners through it.  The Lead button, used in achieving the goal, can also be used to quell a turf war.  In-game tool-tips have been added to explain the buttons.  The storage area has been limited to 10 items:  older items are dropped once the limit is reached.
+
+
+Okay, ready to tag as cultivation_6
+
+
+Promotion:
+X-Freshmeat
+X-Email Jay Bibby (JayIsGames)
+X-Mad Monkey post
+X-Upload to IGF FTP
+
+
+To do:
+X-Fix storage area to add a size limit
+X-Portal building
+X-Follow button (call it "Lead" button in docs"
+X-Portal graphics
+X-Abstract art output from saved gardeners.
+X-Portal should close after user-controled gardener passes through it
+X-Sometimes gardeners give to babies that are following others
+  (this is okay for now... they are real and out in the world, after all
+   they sometimes get mated with too, which is funny).
+X-Portal glyph graphics:  rotate instead of deltaDeltaX and deltaDeltaY
+X-Update how-to-play
+X-Spell check how-to-play
+X-make new graphical version of instructions.
+X-proofread how-to-play
+X-proofread guide
+X-New screenshot
+X-Tool tips
+X-Should not crash if font.tga can't be read
+X-Build files need to copy font and language files.
+X-Generate large soul trails for a better logo
+X-Fix jerky AI behavior before giving gift.
+X-Baby jump to desired position when born
+X-White line above "R" in font TGA.
+X-Gardeners that are following never eat (should eat our gifts... actually,
+  we should share all the food we eat with them, just like offspring).
+  Close to finishing this... tracking them, just need to feed them.
+  See FIXME in Gardener.cpp
+X-Fix tooltip for dropping a follower
+X-Update docs about feeding followers.
+X-Enable code optimizations and turn off debugging.
+X-Pass-through feeding of the babies of followers.
+
+
+
+Running to do (must):
+X-Speed up gardener generation.
+X-Better indication of plant needing water
+X-Better island graphics
+X-Better buttons (and target highlighting)
+X-Seed drawing (color of blue is off)
+X-Tweak AI
+X-Profile and enable optimized compile
+X-A graphical how-to-play document (with screenshots as examples)? 
+  (later, online)
+
+
+November 30, 2006
+
+Ideas coming out of a review by (and email discussion with) Alex Snyder
+
+http://evolutionlive.blogspot.com/2006/11/review-of-cultivation.html
+
+Some kind of visual representation for pollination?
+
+
+My own idea:
+
+--Eating a poisoned fruit could kill your followers, too.
+  Could be a way to quell over-population.
+  Then again, you can limit the effects of over-population already by leading
+  others.
+
+
+Running to do (if time)
+--Pause button
+--Fruit shadows
+--Fruit flying object scale
+X-Leak when mating happens with a dead gardener?
+
+
+
+December 14, 2006
+
+Feedback from Tim W:
+
+>>>>
+Cultivation's not really my type of game, though I did enjoy playing it. I 
+think the reason why not many people are giving feedback is because the 
+instructions can be a little complicated (even though it's quite easy to 
+learn). Perhaps a tutorial would help?
+
+Most people also judge game by their screenshots, it might be a good idea to 
+touch up the sidebars a bit, since it appears throughout the game. Also, the 
+window size should be at fullscreen or a larger size with an option to 
+change accessible and noted clearly at the start of the game.
+
+I got this error while playing as well:
+
+http://static.flickr.com/144/319337796_b565086009_o.jpg
+>>>>>
+
+He's hitting the reset button during the crash... need to fix this, certainly.
+
+
+Feedback from IGF judge:
+
+>>>>
+Could use more player feedback as to age and status of player
+
+I love the idea of this game!  The idea of being a gardener (of some sort) and
+competing for resources seems like good fun.  And I saw glimpses of that when
+playing.
+
+Too bad the game is extremely confusing.  The art is not great, but worse than
+that, it's bad to the point where I can't understand what the different icons
+are even supposed to be.  Too bad there's no way to pause.  Why can't I click
+and drag a box again?  That seems like the obvious interface, every casual 
+gamer knows how to do that, but I suspect you didn't do that because of a 
+technical shortcoming.
+>>>>
+
+
+December 17, 2006
+
+Checked for memory leaks.
+
+
+December 18, 2006
+
+Finished tool tips for object storage.
+Checked for leaks.
+
+
+Added shadow to discard button's x.
+
+Improved seed icons.
+
+Added pixelated background texture to buttons.  Still not happy with it.
+
+
+Started work on background textures for panels.
+
+Idea:  Panel fades towards top (done), but button backgrounds fade toward
+bottom (not done yet).
+
+
+December 19, 2006
+
+Got sidebars looking much better.  Good enough for now.
+
+Checked for leaks.
+
+
+Now deriving seed width from the number of leaves per joint.
+Narrow seeds produce plants with fewer leaves per joint.
+
+
+Ideas for tutorial:
+
+Various events in game trigger display of particular tutorial pages.
+
+Once a given page has been shown, it will never be shown again (even if
+same event happens again).
+
+Tutorial pages shown in a panel that has two buttons 
+("ok" and "stop tutorial). 
+
+Game paused until tutorial window dismissed?  Actually, maybe not (if
+window can fit at top of screen nicely).
+
+Tutorial panel can be added to side panel when needed, and removed when
+dismissed.
+
+
+
+December 21, 2006
+
+Trying to make a trailer:
+
+To convert a series of numbered files to an mpeg1 video:
+  ( 30 fps, min 500 kbits/sec)
+  /data5/jcr13/downloads/ffmpeg/ffmpeg -r 30 -i test%d.png -f mpeg1video -vcodec mpeg1video -r 30 -b 500k test.mpeg
+
+To concat multiple MPEGs together:
+
+  cat *.mpg | /data5/jcr13/downloads/ffmpeg/ffmpeg -i - -f mpeg1video -vcodec mpeg1video -r 30 -b 500k together.mpeg
+
+
+To grab the contents of the GL screen:
+
+  unsigned char *outputImage = new unsigned char[ w * h * 3 ];
+
+  glReadPixels( 0, 0, w, h, GL_RGB, GL_UNSIGNED_BYTE, outputImage );
+
+
+Idea:  
+--"v" key enables video grab.
+--Window resizes (temporarily) to 640x480
+--Frame rate fixed to 30FPS (fake in-game time set to 1/30 sec per frame)
+--Grab 300 frames to numbered PNG files (10 seconds worth)
+--Go back to old window size
+
+
+Got trailer frame capture working.
+
+
+At 4:15am, finally finished trailer.
+
+
+December 22, 2006
+
+Need to remove video-generating code while somehow leaving it in place for
+future use.
+
+Did this.
+
+Fixed button issues and added background for storage area.
+Checked for leaks.
+
+Tutorial framework working well.
+
+
+December 23, 2006
+
+Just got word that trailer needs to be 720x486, not 640x480.
+
+Converted game video clips with scaling and cropping.
+
+Working on generating new titles (not using Adobe Premiere, because it doesn't seem to handle the odd aspect ratio for titles).
+
+Instead, should generate a sequence of jpegs for each title:
+
+If title.jpg is the full-sized title and back.jpg is a black background image,
+we can use a sequence of commands like:
+
+composite -geometry 210 -gravity center title.jpg back.jpg title_1.jpg
+composite -geometry 220 -gravity center title.jpg back.jpg title_2.jpg
+composite -geometry 230 -gravity center title.jpg back.jpg title_3.jpg
+
+
+Actually, can use percentages in geometry.  That would work better, given
+that the title images will be different sizes
+
+vary from 75 to 100 percent, for example
+
+
+December 24, 2006
+
+composite -geometry 50% -gravity center title_0.jpg title_background.jpg title_0_0.jpg
+composite -geometry 50.1% -gravity center title_0.jpg title_background.jpg title_0_1.jpg
+composite -geometry 50.2% -gravity center title_0.jpg title_background.jpg title_0_2.jpg
+composite -geometry 100% -gravity center title_0.jpg title_background.jpg title_0_3.jpg
+
+
+Problem:  placement and scaling using composite is too jerky from frame-to-
+frame.
+
+
+Wrote custom program for smooth placement and scaling.  Works well.
+
+Idea to save space:
+
+Generate links for all jpeg files in frame order (interleaving titles and
+scenes).  Then call ffmpeg once to generate full movie.
+
+
+Problem:  title frames and scene frames have different aspect ratios.
+
+We're using
+
+/data5/jcr13/downloads/ffmpeg/ffmpeg -r 30 -i frames/frame_%d.jpg -f mpeg1video -vcodec mpeg1video -r 30 -b 1864k -s 720x538 -cropbottom 26 -croptop 26 cultivation_720_486.mpg
+
+...with sizing and cropping to convert 640x480 scene frames without distortion
+to 720x486.  The problem is that the interleaved title frames are already
+720x486, so they are getting distorted.
+
+Also, scene frames are drawn with a weird wrap-around effect because they are
+smaller.
+
+ffmpeg must be computing frame sizing based on the first frame instead of
+frame-by-frame.  Thus, it is assuming that all frames are the same size.
+
+Want text to be as sharp as possible (thus, we should avoid generating 640x480
+text frames and then allowing ffmpeg to scale them).
+
+Instead, should blow up and crop scene frames ahead of time?  What about space?
+
+
+December 25, 2006
+
+Got 720x486 trailers generated.
+
+Then read about square pixels and 4:3 aspect ratios... ack!
+
+Generated one more with letterboxes and non-square pixels for a 4:3 aspect
+ratio.
+
+
+Okay, back to the tutorial.
+
+
+Got most of tutorial written.
+
+Decided that we need to pause game while tutorial screens showing (so
+that the player doesn't waste life time while reading).
+
+Need to tweak behavior a bit here (tool tips should show during pause, 
+tutorial-induced pause should not reduce frame rate).  See FIXME.
+
+
+December 26, 2006
+
+Tutorial's test for offspring isn't working.  See FIXMEs in game.cpp
+
+Fixed this.
+
+When writing about emotions in tutorial, though of a new gameplay element:
+
+Gardeners should get very angry (max angry) if you mate with their most liked.
+
+Implemented this and tested it.  Nice twist to add, and easy to add.  Good.
+
+Checked for memory leaks.
+
+
+Got variable-width font working.  Looks great.
+
+Got larger window as default.
+
+Added border to tutorial.
+
+Checked for leaks.
+
+Turned off debugging.  Turned on optimization.
+
+Fixed some problems with tutorials.
+
+
+In testing, it seems that the "VERY angry" "you stole my mate" behavior is too
+powerful.  Poison poison everywhere.
+
+It is also impossible to avoid.  Thus, I need to trim it down to
+balance the game (hey---they game was hard enough without that bit, eh?)
+
+So, instead of VERY angry, they should just get angry.
+
+Did this.
+
+
+Found and fixed a crash with hover object for the selector (if hover object
+drops out from underneath us).
+
+
+Ready to build v7.
+
+
+
+
+So, this mostly amounts to polish (including some of my own):
+
+x-Tool tips vanish after restart
+x-Crash on restart
+x-Pause button
+x-Drag to select plot
+X-Update docs about dragging
+X-Add lowercase to the font
+X-Tool tips for storage
+X-Improved icons (especially seeds).
+X-Better looking sidebars overall
+X-Seed width should depend on another plant parameter (growth rate?)
+X-Tutorial
+X-Background for storage area
+X-Reset button not faded properly
+X-Polish the font
+X-Note in docs about in-game tutorial
+X-Font kerning?
+X-Tutorial border?
+X-Larger default screen size (with option to change) 
+  (glutReshapeWindow, glutFullscreen)
+X-Proofread tutorial text.
+
+
+
+Tagging all as cultivation_7
+
+
+
+
+July 30, 2007
+
+Working on a few polish points before FuturePlay deadline.
+
+Trying to fix segmented soul trails.
+
+
+In doing this, and trying to fix the random seed for repeat testing, I noticed
+that the landscape was seeded independently using the current time.  I think
+that I fixed this (by using a seed generated by globalRandomSource instead), 
+but I need to make sure it is still generating interesting landscapes in
+the final release.
+
+
+Fixed the segmented trails.  Looks much better.
+
+
+
+August 7, 2007
+
+Working on adding sounds to interface cued by various actions.
+
+Got sound effects bank in place.  Just need to fill it.
+
+Put rattling sound in place for planting seed.
+
+Ideas for other sounds:
+
+--Pick up water:  rising sine blip
+--Dump water:   falling sine blip
+--Poison:  low sawtooth blip
+--Pick fruit:  pop sound (like finger popping lips)
+--Eat fruit:  crunch sound
+--Give fruit:  high ping sound
+--Mate:  (?)  maybe similar pop sound 
+
+
+August 9, 2007
+
+Got all sound effects in place.  A nice improvement.
+
+In the future, it might be nice to add effects for lead/stop-lead and also
+for the gate rings and gate opening... also for rising up.
+
+
+To do:
+
+X-Make sure each new game using a different landscape.
+X-Add to read-me about switching language files.
+X-Add basic sound effects.
+X-Make sure French translation included in build (looks like it will be).
+
+
+Tagging all as cultivation_8

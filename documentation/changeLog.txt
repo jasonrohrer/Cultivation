@@ -1,0 +1,167 @@
+Version 10   ???
+
+--Added lock around world construction after restart to fix segfault. 
+
+
+
+
+Version 9    2010-May-31
+
+--Improved plot dragging behavior when player drops second corner of plot
+  on top of one of the GUI panels.
+
+--Fixed bugs that let other gardeners interact with player's gardener after
+  it was dead.
+
+--Locked max frame rate down to 80fps to reduce CPU usage on fast computers.
+
+--Added command-line switches for configure script (to skip interactive menu)
+  by Jose Jorge.
+
+--Added Portuguese translation by Jose Jorge.
+
+--Fixed random number generation on 64-bit platforms (thanks to Kevin Fan).
+
+--Got working against latest minorGems.
+
+--Fixed string warnings thrown by recent GCC versions.
+
+
+
+
+Version 8    2007-August-9
+
+--Fixed linear segmentation of soul trails in larger immortal images.  Soul
+  trails are now smooth curves in all image sizes.
+
+--Included French translation in distribution.
+
+--Added sound effects for many in-game actions.
+
+
+
+Version 7    2006-December-27
+
+--Fixed missing tool-tips after restart, and associated restart crash.
+
+--Changed to mouse dragging for plot selection.
+
+--Added a pause button.
+
+--Improved font.
+
+--Improved button graphics.
+
+--Improved appearance of user interface bars.
+
+--Gardeners now get angry if someone mates with a gardener that they 
+  like a lot.
+
+--Added a tutorial.
+
+
+
+Version 6   2006-November-26
+
+--Fixed some compiler warnings.
+
+--Set a limit of 10 stored items.
+
+--Added poisoning of fruit when standing on poisoned ground.
+
+--Added a Lead button.
+
+--Fixed destination position of flying objects, like harvested fruit, to 
+  match gardener height.
+
+--Added gates to immortality.
+
+--Added tool-tips for buttons.
+
+
+
+Version 5   2006-October-13   
+
+--Fixed a potential crash at startup.
+
+
+
+Version 4   2006-October-10
+
+--Fixed a crash on exit.
+
+--Reduced music sample rate from 44100 to 11025 Hz to improve performance.
+
+--Fixed a crash when an orphaned baby finishes growing.
+
+--Improved selection of least/most-liked gardeners when there is a tie.
+
+--Added a limit on plot size for AI-controlled gardeners.
+
+
+
+Version 3    2006-October-6
+
+--Increased contrast of clouds to make view less hazy.
+
+--Fixed bug that caused highlighted fruit highlighting to differ from 
+  harvested fruit.
+
+--Added a features.txt file for disabling graphical details on slower systems.
+
+--Rewrote AI system using probabilistic behavior selection.
+
+--Added genetic influences in behavior selection.
+
+--Added plot abandoning behavior.
+
+--Improved music pitches.
+
+--Fixed crash when a partially-grown baby's parent dies.
+
+--Fixed a music loudness bug when the gardener population shrinks.
+
+--Made water pickup and dumping smoother.
+
+--Fixed an eye drawing bug.
+
+--Turned on compiler optimizations and turned off debugging for builds.
+
+
+
+Version 2    2006-September-20
+
+--Added genetically-generated music for each gardener.
+
+--Added clouds.
+
+--Fixed bug with plant overlapping.
+
+--Added poison action.
+
+--Fixed a bug that sometimes caused gardeners to rotate randomly at the end of
+  a move.
+
+--Fixed a bug that caused the island shape to be the same after pressing
+  the restart button.
+
+--Improved flower colors.
+
+
+
+Version 1    2006-September-13
+
+--Fixed bug where AI tries to mate with an already-pregnant partner.
+
+--Fixed a bug where mating can be triggered multiple times while the mating
+  cells are in flight, resulting in a machine-gun stream of mating cells.
+
+--Fixed bug causing flower petals to be too narrow.
+
+--Improved leaf textures to remove pixelation.
+
+
+
+Version 0    2006-September-9
+
+--Initial release (Submitted to IGF)

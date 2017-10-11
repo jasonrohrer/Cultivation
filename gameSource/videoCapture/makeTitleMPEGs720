@@ -1,0 +1,4 @@
+
+i="title_destruction"
+
+/data5/jcr13/downloads/ffmpeg/ffmpeg -i "$i".mov -f mpeg1video -vcodec mpeg1video -r 30 -b 1864k -s 720x538 -cropbottom 26 -croptop 26 "$i"_720_486.mpg; rm "$i".mov

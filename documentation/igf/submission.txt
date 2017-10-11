@@ -1,0 +1,161 @@
+Jason Rohrer
+
+28
+
+93 Elm St.
+
+
+
+
+Short:
+
+Cultivation explores the social interactions within a gardening community.  You lead one family of gardeners, starting with a single individual, and wise choices can keep your genetic line from extinction.  While breeding plants, eating, and mating, your actions impact your neighbors, and the social balance sways between conflict and compromise.     
+
+
+Credits:
+
+All parts of this game were conceived, designed, programmed, tested, and packaged by Jason Rohrer.
+
+
+Platforms:
+
+Windows 95/98/NT/2000/XP
+Mac OS X 10.2 and higher
+Linux
+
+Basic Requirements:
+--OpenGL Support
+--Mouse
+
+Minimum Tested System:
+--200 MHz CPU
+--Any 3D Card that accelerates OpenGL (test system:  Voodoo3)
+
+Recommended System:
+--400 MHz CPU or faster
+--A fast 3D card that accelerates OpenGL
+
+
+Dev Time:
+
+3 Months
+
+
+Number of developers:
+
+1 part time (15 or so hours per week, plus a few late nights)
+
+1 total
+
+
+
+
+Bio:
+
+Jason Rohrer is an independent programmer, scientist, artist, and activist.  He holds two degrees in computer science from Cornell University.  As a peer-to-peer networking developer working in open-source, he has created several popular programs over the past five years, including konspire2b and MUTE.  His first video game, Transcend, was entered into the 2005 IGF and included on the Moondance Independent Games compilation.  Cultivation is his second video game project.
+
+
+
+long description:
+
+Genres:
+--Social simulation
+--Cross-breeding sandbox
+--Real-time strategy
+
+Overview of gameplay
+
+The core mechanic in Cultivation is land allocation.  Each gardener picks a plot of land, and a gardener can only plant, tend, and harvest from its chosen plot.  Plots can overlap, putting portions of land and established plants in contention, and this is the main source of conflict in Cultivation.  Gardeners can resize or move their plots at will, so land squabbles can result in compromise or revenge.  
+
+Within this framework, a variety of play styles are possible, including cooperative, competitive, and antagonistic.  Each choice has consequences within the social network---you can become well-liked or widely-hated.
+
+Additional gameplay elements include planting, watering, and harvesting;  cross-breeding plants to isolate desirable traits;  eating to maintain a balance of nutrients;  gift-giving to bolster friendships;  mating to pass on genetic heritage;  and caring for offspring.
+
+
+Other features
+
+All graphics in Cultivation are procedurally generated at playtime.  Plants and gardeners are constructed using genetic mappings and algorithms that emulate biological growth patterns.  Thus, each plant and gardener is unique, and mating produces offspring that are genetic and visual combinations of the parents.  Plant growth parameters and gardener behavior are also mapped from genetics and passed on to offspring.  Each game of Cultivation looks unique and presents new strategic challenges.
+
+
+
+Extra text:
+
+Right before I designed Cultivation, I read Raph Koster's "Theory of Fun" book.  I was inspired by his ideas about how games can become art.  According to Koster, a work in any medium becomes art when it ceases to have one "right answer" or obvious interpretation.  For games to become art, they must give players multiple viable play choices and not specify that only one choice is right.
+
+After I had some colorful human interactions in the real-world community of my town, I became interested in the balance between self-interest and compromise.  Sometimes both opposing sides need to "give a little" to reach a common ground. 
+
+This seemed like the perfect kind of problem---certainly with no right answer.  How could I abstract these complex interactions into a game?  A community of gardeners, with land disputes, seemed like an appropriate metaphor that still retained the important elements of self-interest and compromise. 
+
+
+
+Submitted at 12:42 AM EST (Sept 9, 2006)
+
+Entry Number:152
+Credit Card Transaction Reference:VPFE0B4D6C18
+
+
+Please upload your file in the following directory!: /152/
+
+Hostname: upload.minnickweb.com
+User: igfcontest
+Password: igfftpentry
+
+
+
+
+Response letter:
+
+
+If you're getting this message, that's because you've entered the main
+competition for the 2007 Independent Games Festival (http://www.igf.com). My
+name's Simon Carless, and I'm the Chairman for the IGF at the CMP Game Group,
+and I just wanted to send a quick extra email out to welcome you to the IGF and
+clarify a couple of points that have come up during the submission process:
+
+- Again, thanks to all that entered. We have a record amount of entries (again!)
+this year, and many of the 141 entered games seem to be exceptionally high
+quality, so basically - you guys rock! The full list of entries is up now on the
+IGF site: http://www.igf.com/php-bin/entries2007.php - tell us if you see any
+issues with how your game is listed. In addition, here's our final judge list
+for this year: http://www.igf.com/judges.html - we've added a lot of new and
+adorable industry judges to round out our roster, which is great news for
+everyone.
+
+- If you'd like to upload updates to your game and it was submitted via FTP,
+then you can upload a new version at any time, and the judges will be instructed
+to get the latest version when they start judging. However, we can't guarantee
+exactly when judges will get the .EXE, obviously - but they haven't yet, for
+what it's worth, so updates in the next few days will probably be grabbed by
+them. It's possible that updates uploaded in 6 weeks time will be grabbed too,
+of course - just upload your game updates into your numbered directory, and
+please put the date of the new version in the filename (eg game091405.exe), so
+it's obvious.
+
+- As with last year, we are going to _try_  to get anonymous feedback from the
+judges back to all contestants, even those who don't make it as finalists.
+Obviously, we can't guarantee that all judges will have time to write feedback
+as well as rate the game, and the judges will be anonymous, but hopefully we
+will be able to communicate some feedback to you, and if it's nice (heh!), you
+will be able to use it in promotional material for your game - eg. 'I loved this
+game! 2007 IGF Judge'. Last year, we got about 80-90% of the games receiving
+some amount of feedback.
+
+- For those who don't know, December 9th 2006 is the date which the finalists
+are announced on, so watch the website then - we will also start emailing you,
+because all finalists win either one Giga pass or two Classic passes to GDC
+2076, which is in San Jose from March 5th-9th 2007, and finalists are allowed to
+make one final game patch update, and also upload a public demo version (if they
+can/want) for the Audience Award
+
+If there are any problems at this stage of the judging, then please get back to
+me and my colleague Stephanie Tang (stang@cmp.com) and we'll try to resolve it
+for you. I'll be away at the Tokyo Game Show from this Thursday (14th), however,
+so replies may be a little slow during that time. And again - thanks for
+entering the Independent Games Festival and helping make it the leading indie
+games festival it is today!
+
+Regards,
+Simon Carless
+[Chairman, IGF.]
+scarless@cmp.com
+415-947-6145

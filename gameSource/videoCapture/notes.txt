@@ -1,0 +1,94 @@
+Start with: 
+  --640x480 screens captured from game stored in ../savedVideo
+  --Single stills for each title stored in titles folder
+  --title_background.jpg   stored in titles folder
+
+Process for generating video:
+
+1.  run makeTitleMPEGs720  in title folder
+  (this actually renders JPG frames, not MPEGs)
+    Stores results in titles folder
+
+
+2.  run make720SceneFrames
+   (converts 640x480 frames into 720x486 frames)
+   stores results in scenes folder
+
+
+3.  run makeFrameLinks
+   (makes links to all frames from titles and scenes)
+   stores results in frames folder
+
+4.  run trimAudio2
+   (trims the music clip down to 1:21 with a nice fade out)
+   stores result in current directory as music2.aiff
+
+
+5.  Run these as needed to generate MPG and VOB files:
+
+makeMPEG_720_fromFrames
+makeMPEG_360_fromFrames
+makeMPEG_320_240_fromFrames
+makeMPEG_720_486_DVD_fromFrames   (square pixels)
+makeMPEG_720_486_DVD_4_3_fromFrames  (non-square pixels for 4:3 aspect ratio)
+
+
+
+General notes
+
+SendThisFile:  cultivation_720_486_dvdQuality.mpg
+kali@sunsetedit.com
+
+The first file that I sent contained 30 FPS video encoded at 1864 kb/s and audio at 128 b/s.  After sending, I recalled that you asked for DVD quality, so I did some more reading and learned that DVD video is compressed at a higher bitrate and has a slightly different framerate.  This is the MPEG1 version of the file at a video bitrate of 6000 kb/s and audio at 192 b/s.  The MPEG2 version (as a DVD VOB file) is coming next.
+
+Hmm... just did some more reading, and now I'm even more confused.  My video is 720x486 with *square pixels* (my source frame JPEGs were 720x486).  This makes the aspect ratio 1.481, or roughly 3:2 (720x486 is 3:2).  However, I don't see that as a supported aspect ratio for DVDs... I only see 4:3 (standard NTSC TV) and 16:9 (widescreen).  So what does that mean?  I guess the pixels will be interpreted as non-square to squeeze them into 4:3 or stretch them into 16:9.  I hope you can letterbox on your end to avoid distorting my frames.
+
+Specs:
+File Format:  MPEG1
+Video frame size: 720x486 with square pixels
+Video frame rate: 29.97 frames/sec
+Video compression:  MPEG1 6000 kb/s
+Audio compression:  Stereo, 44100 Hz, MP2, 192 b/s
+Duration: 81 seconds
+
+Jason
+
+
+
+SendThisFile:  cultivation_720_486_dvdQuality.vob
+kali@sunsetedit.com
+
+This is the MPEG2 (DVD VOB) version of the DVD-quality game trailer for Cultivation.
+
+Unfortunately, I don't have a player on my end that can play VOB files (the ac3 audio, or the 48000 Hz audio, seems to be a problem for my players, but I can see the video).  Thus, I have no idea if this file "works."  Please cross-check it against the MPEG1 files that I sent.  
+
+In particular, since my source audio was at 41000 Hz, I'm concerned about the transfer to 48000 Hz.  If you end up using this VOB file, please make sure the music doesn't sound "slowed down" compared to the MPEG1 files.
+
+Sorry for dumping so many files in your lap.  I wish this stuff wasn't so complicated.  I'm going out of town on December 27, so I won't be able to do any more video editing after tomorrow.  Thus, I wanted to get you at least *something* that you can work with before I left.
+
+Specs:
+File Format:  MPEG2 PS (DVD VOB)
+Video frame size: 720x486 with square pixels
+Video frame rate: 29.97 frames/sec
+Video compression:  MPEG2 6000 kb/s
+Audio compression:  Stereo, 48000 Hz, ac3, 448 kb/s
+Duration: 81 seconds
+
+Jason
+
+
+SendThisFile:  cultivation_720_486_dvdQuality_4_3.mpg
+kali@sunsetedit.com
+
+Last one, I promise:
+
+This one has non-square pixels for display at a 4:3 aspect ratio.  To make this work, I had to put black bars at the top and bottom of the frame.
+
+File Format:  MPEG1
+Video frame size: 720x486 with non-square pixels (4:3 aspect ratio)
+Video frame rate: 29.97 frames/sec
+Video compression:  MPEG1 6000 kb/s
+Audio compression:  Stereo, 44100 Hz, MP2, 192 kb/s
+Duration: 81 seconds
+
+Jason

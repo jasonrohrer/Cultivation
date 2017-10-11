@@ -1,0 +1,17 @@
+# for each scene
+
+for i in `seq 0 8`;
+do
+
+   # for each of 150 frames (5 seconds of video at 30 frames per second)
+
+   for f in `seq 0 149`
+   do 
+       # 1.25 scales 640 to 720
+
+       echo "Making file scene_"$i"_"$f".jpg"
+
+       titles/scaleOverlayImage titles/title_background.jpg ../savedVideo/video_"$i"_"$f".jpg  1.25  scenes/scene_"$i"_"$f".jpg
+
+   done
+done

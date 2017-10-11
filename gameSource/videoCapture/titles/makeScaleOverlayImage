@@ -1,0 +1,1 @@
+g++ -O9 -o scaleOverlayImage -I../../../.. scaleOverlayImage.cpp -ljpeg ../../../../minorGems/io/file/linux/PathLinux.o ../../../../minorGems/graphics/converters/unix/JPEGImageConverterUnix.cpp

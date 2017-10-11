@@ -1,0 +1,75 @@
+#!/bin/sh
+
+#
+# Modification History
+#
+# 2006-July-13   Jason Rohrer
+# Copied from Transcend build.
+#
+
+
+if [ $# -lt 2 ] ; then
+   echo "Usage: $0 release_name unix_platform_name"
+   exit 1
+fi
+
+
+rm -rf unix
+rm -rf windows
+
+mkdir windows
+mkdir unix
+
+
+# work on unix tree first
+mkdir unix/Cultivation
+mkdir unix/Cultivation/languages
+
+cp ../documentation/how_to_*.txt unix/Cultivation/
+
+cp ../gameSource/features.txt unix/Cultivation/
+cp ../gameSource/language.txt unix/Cultivation/
+cp ../gameSource/font.tga unix/Cultivation/
+
+cp ../gameSource/languages/*.txt unix/Cultivation/languages
+
+
+
+# duplicate unix tree so far to make windows tree
+cp -r unix/Cultivation windows/
+
+cp ../gameSource/Cultivation unix/Cultivation/
+
+cp win32/Cultivation.exe win32/*.dll windows/Cultivation/
+
+cd unix
+tar cf "Cultivation_$1_$2.tar" Cultivation
+gzip "Cultivation_$1_$2.tar"
+
+
+# compile unix2dos
+cd ..
+g++ -o unix2dos unix2dos.c 
+cp unix2dos windows
+cp unix2dosScript windows
+
+
+cd windows
+
+for file in Cultivation/*.txt
+do
+	./unix2dosScript "$file"
+done
+
+for file in Cultivation/languages/*.txt
+do
+	./unix2dosScript "$file"
+done
+
+
+zip -r "Cultivation_$1_Windows.zip" Cultivation
+
+
+
+
+

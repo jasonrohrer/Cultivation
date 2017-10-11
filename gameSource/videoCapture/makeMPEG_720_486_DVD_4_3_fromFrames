@@ -1,0 +1,16 @@
+
+# this one looks good:  aspect ratio adjustment, plus letterbox
+# non-square pixels
+# actually displayes correctly in quicktime player (displays as 652x486)
+
+/data5/jcr13/downloads/ffmpeg/ffmpeg -r 29.97 -i frames/frame_%d.jpg -i music2.aiff -f mpeg -vcodec mpeg1video -r 29.97 -b 6000k -acodec mp2 -ar 44100 -ab 192k -s 720x430 -padtop 28 -padbottom 28 -aspect 4:3 cultivation_720_486_dvdQuality_4_3.mpg
+
+
+# test aspect ratio adjustment without letterbox
+
+#/data5/jcr13/downloads/ffmpeg/ffmpeg -r 29.97 -i frames/frame_%d.jpg -i music2.aiff -f mpeg -vcodec mpeg1video -r 29.97 -b 6000k -acodec mp2 -ar 44100 -ab 192k -s 720x486 -aspect 4:3 cultivation_720_486_dvdQuality_4_3_test.mpg
+
+
+# test letterbox without aspect ratio adjustment
+
+#/data5/jcr13/downloads/ffmpeg/ffmpeg -r 29.97 -i frames/frame_%d.jpg -i music2.aiff -f mpeg -vcodec mpeg1video -r 29.97 -b 6000k -acodec mp2 -ar 44100 -ab 192k -s 720x430 -padtop 28 -padbottom 28 cultivation_720_486_dvdQuality_4_3_test2.mpg

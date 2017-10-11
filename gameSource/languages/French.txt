@@ -1,0 +1,188 @@
+tip_PlantButton   "Planter la graine selectionnee"
+tip_PlotButton    "Choisir un terrain"
+tip_water_pickup  "Prendre "
+tip_water_dump    "Lacher "
+tip_WaterButton	  "Eau"
+tip_HarvestButton "Recolter fruit"
+tip_MateButton    "Ami"
+tip_lead          "Conduire" 
+tip_stop_leading  "Arreter de conduire "
+tip_LeadButton    "un autre jardinier"
+tip_PoisonButton  "Empoisonner"
+tip_PauseButton   "Pause"
+tip_RestartButton "Reprendre"
+tip_QuitButton    "Quitter"
+tip_EatButton     "Manger le fruit selectionne"
+tip_GiftButton    "Donner le fruit selectionne"
+tip_DiscardButton "Jeter l'objet selectionne"
+tip_fruit         "Fruits stockes "
+tip_poisoned      "(empoisonnee)"
+tip_seed          "Graine stockee "
+tip_darkSoil      "-- aime le sol sombre"
+tip_lightSoil     "-- aime le sol clair"
+tip_StopTutorial  "Arreter le tutoriel"
+tip_NextTutorial  "Continuer le tutoriel"
+
+
+
+tutorial_question    "Voulez-vous suivre le tutoriel ? Cliquez sur le bouton vert 'Continuer' pour le demarrer , ou cliquez sur le bouton rouge 'Arreter' pour fermer le tutoriel."
+
+
+tutorial_welcome1     "La fenetre de tutoriel gele le jeu en arriere-plan. Quand vous avez termine de lire un message du tutoriel, cliquez sur le bouton vert 'Continuer'."
+
+
+tutorial_welcome2     "Ce tutoriel vous fera suivre une partie complete de Cultivation, mais attention ! : il pourrait reveler des details et des strategies qu'il serait plus amusant de decouvrir vous-meme..."
+
+
+tutorial_moving   "Premiere chose : se promener. Cliquez sur la carte pour deplacer votre jardinier. Cliquez sur le bouton vert 'Continuer' pour essayer."
+
+
+tutorial_survival1   "Votre premier objectif est la survie. Si vous ne mangez pas, vos nutriments vont s'epuiser, et vous vieillirez plus rapidement."
+
+
+tutorial_survival2   "Il y a 3 nutriments :  Rouge, Jaune, et Violet.  Les 3 spheres a l'arriere de votre jardinier montre les niveaux des nutriments."
+
+
+tutorial_survival3   "Vous utilisez plus de nutriments si vous bougez beaucoup ou portez des choses telles que de l'eau."
+
+
+tutorial_survival4   "Vous pouvez refaire le plein de nutriments en mangeant des fruits, mais il faut d'abord en obtenir. Une facon de faire est de les faire pousser vous-meme."
+
+
+tutorial_seeds1   "Vous demarrez le jeu avec quelques graines stockees dans la panneau lateral gauche. Vous pouvez les planter pour faire pousser des fruits."
+
+
+tutorial_plot   "Mais avant de faire cela, vous devez delimiter votre terrain. Cliquez sur le bouton 'Choisir un terrain' puis selectionnez un rectangle sur la carte."
+
+
+tutorial_plant   "Maintenant deplacez-vous sur votre terrain, cliquez sur une graine stockee pour la selectionner, puis cliquez sur le bouton 'Planter'."
+
+
+tutorial_water1   "Vos semences ont besoin d'eau pour croitre. Rendez vous sur l'eau puis pressez le bouton 'Eau' pour prendre de l'eau.."
+
+
+tutorial_water2   " Retournez a vos plantations et pressez le bouton 'Eau' a nouveau pour lacher l'eau."
+
+
+tutorial_water3   "Un halo circulaire au dessus d'une plante indique que sa croissance est stoppee et qu'elle necessite plus d'eau. Une fois qu'une plante a fini sa croissance, vous pouvez arreter de l'arroser."
+
+tutorial_plot2   "Vous pouvez uniquement vous occuper des plantes se trouvant sur votre terrain, mais vous pouvez changer votre terrain a tout moment."
+
+tutorial_plot3   "Votre terrain peut chevaucher les terrains d'autres jardiniers. Dans ce cas vous et les autres jardiniers serez en conflit sur les plantes se trouvant dans la zone de chevauchement."
+
+
+
+tutorial_harvest1   "Vous avez des fruits murs sur votre terrain. Placez vous pres de la plante et pressez le bouton 'Recolter'."
+
+
+tutorial_eat1   "Un fruit est maintenant stocke dans le panneau lateral. Cliquez sur le fruit pour le selectionner, puis cliquez sur le bouton 'Manger' pour le manger."
+
+tutorial_eat2   "Un fruit d'une couleur a une haute valeur dans le nutriment de cette couleur, mais contient seulement de faibles quantites des nutriments des autres couleurs."
+
+tutorial_seeds2   "Remarquez que manger un fruit vous a donne une nouvelle graine. Chaque fruit contient une graine."
+
+tutorial_seeds3   "La couleur d'une graine montre le type de terrain qu'elle prefere : les graines claires preferent les sols clairs, les graines sombres les sols sombres. Une graine plantee sur son sol favori a une croissance optimale."
+
+tutorial_seeds4   "Le cercle colore a cote de chaque graine indique de quelle couleur sera le fruit produit par la plante qui en resultera."
+
+tutorial_seeds5   "Pour produire des fruits, les plantes se croisent avec n'importe quelle plante pres d'elles. Les graines du fruit resultant produiront des plantes genetiquement hybrides."
+
+tutorial_seeds6   "En placant certaines plantes ensemble, vous pouvez faire obtenir de maniere selective certaines capacites voulues. Par exemple vous pouvez essayer de faire pousser des plantes qui produisent de grandes quantites de fruits."
+
+
+tutorial_gift1   "Vous pouvez egalement donner un fruit a un autre jardinier. D'abord, placez-vous pres du jardinier. Selectionnez le fruit que vous souhaitez donner, puis cliquez sur le bouton 'Donner'."
+
+
+tutorial_emotion1   "Grace a ce cadeau, ce jardinier vous apprecie plus. Le '+' vert qui vous arrive indique la satisfaction du jardinier."
+
+
+tutorial_emotion2   "Si vous voyez un 'x' rouge voler vers votre jardinier, cela signifie que vous mettez en colere un autre jardinier."
+
+
+tutorial_emotion3   " Vous pouver facher les autres jardiniers en plantant sur leur terrain ou en recoltant leurs plantes. Cela ne peut se produire que si les terrains se chevauchent."
+
+
+tutorial_lifespan1   " Votre duree de vie est representee par la boule de plasma au centre de votre jardinier. Il a diminue de moitie, ce qui signifie que votre vie est a moitie termine."
+
+tutorial_lifespan2a   " Vous avez deja produit une descendance, dont vous prendrez le controle a votre mort."
+
+tutorial_lifespan2b   " Vous etes feconde. Si vous arrivez a donner naissance avant de mourir, vous prendrez le controle de ce descendant a la fin de votre vie."
+
+tutorial_lifespan2c   " Votre horloge biologique tourne. Il est temps de penser a sa faire des amis. Si vous n'avez pas de descendance a votre mort, le jeu se terminera !"
+
+
+tutorial_mating1   "Pour sympathiser, placez vous pres d'un jardinier. S'il vous apprecie assez et que vous n'etes pas deja feconde,le bouton "Ami" sera active."
+
+
+tutorial_mating2   "S'ils ne vous apprecie pas assez, donnez lui un fruit ou deux. Esperons que ce soient les fruits de la passion ;) "
+
+tutorial_mating3   "Vous pouvez mettre un colere un jardinier en faisant ami-ami avec un jardinier qu'il apprecie beaucoup. Faites attention quand vous choisissez votre ami."
+
+
+tutorial_pregnant1   "Vous etes feconde. Gardez un niveau suffisant pour les 3 nutriments afin que la grossesse progresse.."
+
+
+tutorial_birth1   "Felicitation ! Vous venez de donner naissance a un bebe jardinier fretillant... Votre bebe vous suivra et partagera votre nourriture pdenant un moment."
+
+tutorial_birth2   "Mangez equilibre pour que votre bebe grandisse. Une fois assez grand il sortira de lui-meme."
+
+
+tutorial_poisoned1  "Vous venez de vous deplacer sur un sol empoisonne, et certains de vos fruits ont ete contamines."
+
+tutorial_poisoned2  "Manger des fruits empoisonnes vous provoquera une mort rapide."
+
+
+
+tutorial_death1   "Vous venez de mourir. Remarquez l'anneau qui se forme a l'endroit de votre mort : c'est le premier anneau dans le portail pour l'immortalite."
+
+tutorial_death2   "4 anneaux supplementaires doivent etre crees pour que le portail s'ouvre. Les jardiniers que vous controlez sont speciaux : ils ont le pouvoir d'ouvrir ces anneaux en mourrant."
+
+tutorial_death3   "Pour ouvrir plus d'anneaux, vous devez ramener vos futurs jardiniers au centre du portail juste avant qu'ils ne meurent."
+
+tutorial_death4  "Si votre jardinier meurt ailleurs qu'a un portail, aucun nouvel anneau ne sera ouvert.."
+
+tutorial_death5  "Un portail peut etre detruit par un sol empoisonne. Si cela se produit, vous devrez creer un autre portail ailleurs."
+
+
+
+tutorial_death1a   "Vous etes mort a nouveau. Cette fois, vous n'avez pas de descendance que vous pouvez controler, donc la partie est terminee. Cliquez sur le bouton "Redemarrer" pour commencer une nouvelle partie."
+
+tutorial_death6a   "Malheureusement,vous n'avez pas de descendance que vous pouvez controler, donc la partie est terminee. Cliquez sur le bouton "Redemarrer" pour commencer une nouvelle partie."
+
+tutorial_death6b   "Vous venez de prendre le controle de votre descendance."
+
+
+
+tutorial_gate1   "Le portail vers l'immortalite est maintenant ouvert. Chaque jardinier qui passera ce portail deviendra immortel."
+
+tutorial_gate2   "Quand votre jardinier entrera dans le portail, celui-ci se refermera, et aucun autre jardinier ne pourra passer a travers."
+
+tutorial_gate3   "Si vous souhaitez emmener des jardiniers avec vous, vous devrez les conduire a travers le portail sans passer le portail vous-meme."
+
+tutorial_gate4   "Vous pouvez utiliser le bouton 'Conduire' pour cela. Neanmoins seuls les jardiniers qui vous apprecient vous suivront."
+
+tutorial_gate5   "Plus vous sauvez de jardiniers, plus grande sera votre recompense."
+
+
+tutorial_immortal1  "La porte vers l'immortalite est maintenant refermee, et les jardiniers que vous avez choisis sont maintenant immortels."
+
+tutorial_immortal2  "Vous avez recu une recompense, mais vous ne l'avez peut etre pas encore decouverte. Cette recompense est quelque chose que vous pouvez prendre avec vous en dehors du jeu."
+
+tutorial_immortal3  "Quittez le jeu et jetez un oeil aux alentours pour trouver votre recompense.Si vous donnez votre langue au chat, cliquez sur le bouton 'Continuer' pour avoir un indice..."
+
+
+tutorial_immortal4  "Vous etes sur de vouloir un indice ?"
+
+
+tutorial_immortal5  "Examinez le fichier PNG immortel dans votre dossier Cultivation. Vous devriez pouvoir le visualiser avec un navigateur web."
+
+
+
+
+
+
+
+
+
+
+

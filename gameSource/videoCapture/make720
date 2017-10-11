@@ -1,0 +1,18 @@
+
+# one option:
+# modify source images first to 720x486
+# then make an mpeg
+#   Problem:  mogrify is slow
+# mogrify -format png -geometry 720x538 -crop 720x486+0+26 video_0_*.jpg
+
+# Instead, do the scaling and cropping during the mpeg video-making step
+
+# make video_0_720_486.mpg through video_8_720_486.mpg
+
+for i in `seq 0 8`;
+do
+
+/data5/jcr13/downloads/ffmpeg/ffmpeg -r 30 -i video_"$i"_%d.jpg -f mpeg1video -vcodec mpeg1video -r 30 -b 1864k -s 720x538 -cropbottom 26 -croptop 26 video_"$i"_720_486.mpg
+
+done
+

@@ -1,0 +1,12 @@
+cat \
+title_gardeners.mpg video_0.mpg \
+title_island.mpg video_1.mpg \
+title_choices.mpg video_2.mpg \
+title_compromise.mpg video_3.mpg \
+title_conflict.mpg video_4.mpg \
+title_self-interest.mpg video_5.mpg \
+title_self-sacrifice.mpg video_6.mpg \
+title_destruction.mpg video_7.mpg \
+title_immortal.mpg video_8.mpg \
+credits.mpg \
+| /data5/jcr13/downloads/ffmpeg/ffmpeg -i - -i music.aiff -f mpeg -vcodec mpeg1video -r 30 -b 466k -s 320x240 -acodec mp2 -ab 128k cultivation_320_240.mpg

@@ -1,0 +1,4 @@
+/data5/jcr13/downloads/ffmpeg/ffmpeg -i title_destruction.mov -f mpeg1video -vcodec mpeg1video -r 30 -b 1864k title_destruction.mpg; rm title_destruction.mov
+
+
+/data5/jcr13/downloads/ffmpeg/ffmpeg -i credits.mov -f mpeg1video -vcodec mpeg1video -r 30 -b 1864k credits.mpg; rm credits.mov

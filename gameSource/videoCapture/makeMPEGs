@@ -1,0 +1,10 @@
+
+# make video_0.mpg through video_8.mpg
+
+for i in `seq 0 8`;
+do
+
+    /data5/jcr13/downloads/ffmpeg/ffmpeg -r 30 -i video_"$i"_%d.jpg -f mpeg1video -vcodec mpeg1video -r 30 -b 1864k video_"$i".mpg
+
+done
+

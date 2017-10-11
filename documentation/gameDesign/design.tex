@@ -1,0 +1,581 @@
+\documentclass[12pt]{article}
+
+\usepackage{epsfig,times,fullpage}
+
+
+% syntax: %\insertfigure{width}{file_name}{caption}{label}
+\newcommand{\insertfigure}[4] {
+	\begin{figure*}[tb]
+		\begin{center}
+			\fbox{
+				\begin{minipage}{#1}
+					\includegraphics[width=\textwidth]{#2}
+				
+					\caption{#3}
+				
+					\label{#4}
+				\end{minipage}
+			} 
+		\end{center}
+	\end{figure*}
+}
+
+
+
+\begin{document}
+
+\title{Game 2 Design Document}
+
+\author{Jason Rohrer}
+
+\maketitle
+
+\begin{abstract}
+
+\end{abstract}
+
+
+\section{Game Goals}
+
+The goal of this game project is to help the player explore:
+\begin{enumerate}
+\item {\bf The relationship between self-interest and community building}; and
+\item {\bf The role of games in society}.
+\end{enumerate}
+
+
+\section{Game Topic}
+
+The topic of this game can be distilled best into the following phrase:  {\bf Community Gardening}
+
+
+\section{Game Goals in Detail}
+
+\subsection{Self-interest and community building}
+
+Within this general goal, I want to explore:
+\begin{itemize}
+\item Community building vs. self-interest;
+\item Compromise vs. victory;
+\item Coexistence vs. conquest; and
+\item All of the trade-offs inherent in these dualities.
+\end{itemize}
+
+For example, conquest gets you all of the resources and all of the power, but achieving it results in loss of life on both sides along with lingering bitterness on the conquered side.  
+Conquest can lead to a lack of long-term stability.
+On the other hand, coexistence involves less resources for your side, plus ongoing squabbles over border lines.
+
+
+\subsection{The role of games in society}
+
+Can we somehow ask questions about the medium itself, particularly in relation to the first game goal?
+
+Modern art asks ``What is art?'' and pushes at the boundaries of art itself.
+As a result, however, most ``modern art'' pieces are not very enjoyable for most viewers.
+Perhaps these viewers are not interested in exploring the boundary between ``not art'' and ``art,'' but are instead wanting to view pieces that are dead-center in the ``art'' region.
+
+Only a select few (myself included) seem to appreciate modern art.
+Most of these fans are artists themselves. 
+Thus, we might conclude that only those who work in a given field are really interested in exploring work that pushes the boundaries of that field.
+Perhaps those that work in art are so familiar with ``dead-center'' on the art spectrum that they are bored with it.
+The boundaries become more interesting to people who are bored with the center.
+
+With modern art ``appreciation'' problems in mind, we can come to the following realization:  
+{\em If we try to make a game that pushes similar boundaries (``Is it a game?''), it will likely appeal to very few people, though a select few will love it.}
+
+So, we should probably avoid using a game to ask questions like ``What is a game?''
+Instead, we can think about the general role of games in society:
+\begin{itemize}
+\item They do not result in ``real world'' gains or losses;
+\item They seem to ``waste time'' and maybe even ``waste resources;''
+\item They are fun;
+\item They may (or may not) teach us something useful about the real world; and
+\item They can be social devices (for example, to build friendships).
+\end{itemize}
+More generally, we could explore the role of recreation in society.  
+Too much, of course, would lead to societal collapse.  
+Not enough, on the other hand, might harm mental health.
+
+What about the role of games in mitigating conflict (which relates to our first game goal).
+We can think about ``World Cup'' instead of ``World War.''
+
+Within this general goal, I want to explore:
+\begin{itemize}
+\item What is more fun, a game or real life?
+\item What is a proper balance between work and play?
+\item How do work and play relate to self-interest and community building?
+\end{itemize}
+
+``I don't like his politics, but he's an okay guy---we bowl together every Thursday.''
+
+
+\section{Game Topic in Detail}
+
+When considering the topic of ``community gardening'' here, I am not going into details about how a particular topic feature can fit into a game, but instead fleshing out the topic itself.
+The game mechanics can try to represent various facets of the topic.
+
+Thus, the discussion below describes such a community as it might exist and function in the real world, not as it might be represented by a game. 
+
+\subsection{The community}
+Consider a community of neighboring gardeners with no officially-enforced property ownership.
+This would be an environment with co-existence, cooperation, shifting boundaries, and many distinct individuals operating near each other.
+
+In such an environment, each gardener would pick a plot of land to cultivate, and there would be nothing stopping multiple gardeners from picking the same plot or selecting plots that overlap.
+Nothing would stop one gardener from harvesting fruit from the plants cultivated by another (in other words, stealing).
+
+Different plots in such an environment might be good for growing certain plants and bad for growing others.
+A wet plot might be good for rice and a dry plot good for garlic.
+A loamy plot might be good for melons and a sandy plot good for parsnips.
+A shady plot might be good for lettuce while a sunny plot good for tomatoes.
+
+\subsection{Trade}
+
+Of course, gardeners cannot live on rice (or whatever their ``easiest'' crop is) alone, as each crop provides different necessary nutrients.
+Furthermore, each gardener will likely grow more of a particular crop than is necessary for solo consumption.
+Excess crops of a particular type, if stored for too long, will rot and become useless. 
+Also, plant seeds do not just come out of thin air:  they must either be harvested from mature plants or obtained from other gardeners.
+
+Thus, in such an environment, trade between gardeners can be beneficial.
+
+Pollination is an important factor in such an environment.
+Pollen from a neighbor's plants may cross with a gardener's plants and produce unexpected offspring plants (perhaps even plants that are no longer well-suited to the gardener's soil conditions).
+Alien pollination is also a way to produce new (and perhaps useful) plant varieties, however.
+
+\subsection{Gardener biology}
+
+Of course, gardeners in this environment are living creatures themselves and subject to the various biological constraints.
+Gardeners, as mentioned before, must eat to survive.
+Various actions consume various amounts of energy---sustaining hard work requires more food consumption than sustaining light work or idleness.
+Furthermore, even with sufficient and nutritionally-comprehensive food consumption, gardeners have limited life spans.
+
+Thus, like all biological creatures, they are driven to produce offspring.
+More offspring increases the chances of gene survival but involves a greater food burden.
+
+
+\subsection{Recreation}
+
+Gardeners in such a community would do other things besides gardening.
+We can think about the kind of recreation that they would engage in.
+Some of that recreation would certainly involve other gardeners from the community.
+
+This recreation would take time away from their gardening chores.
+In addition, it might consume various resources that could otherwise be put toward gardening and food production.
+At the very least, recreation would consume energy that could otherwise be devoted to gardening, but it might require other resources as well.
+Corn kernels might be dried and saved for use as game counters (perhaps for the game mancala), particular land areas might be converted from gardens into play fields, and special crops might be grown just for the purpose of making recreation equipment (for example, rubber trees).
+
+
+\subsection{Social interactions}
+
+Gardeners in such a community would compete for limited resources.
+
+Land itself is the most obvious resource---as mentioned earlier, certain land areas are better-suited for growing particular types of crops.
+Gardeners would be jealous of the land used by their neighbors.
+The borders between two gardens, in particular, would be in contention.
+Gardeners would ``push'' against each other, trying to expand their gardens into their neighbors' space slowly over time. 
+
+There would also be contention over ownership of the plants themselves.
+Who owns a plant that is growing right on the border between two gardens, and who is entitled to harvest from it?
+What happens when one gardener ``sneaks'' into another gardener's plot and harvests from it?
+
+These contentions would have emotional results:  a given gardener would like some neighbors and dislike others.
+``Tit for tat'' strategies might develop, where gardeners would expand into the plots of (or steal from) gardeners that have bothered them in the past.
+Grudges would develop, and these grudges might span generations.
+
+Trade would also figure into the social and emotional space.
+Gardeners would grant more favorable trading terms to the gardeners that they like, and may even give extra produce away for free to their friends.
+A gift of produce might be used to express goodwill or cement a friendship.
+
+Friendships could be bolstered, and tensions eased, through recreation with neighboring gardeners.
+
+
+
+\section{General Design Ideas}
+
+\subsection{Idea: A game within a game}
+The sub-game is potentially more ``fun'' than ``real life'' in the main game.
+``Real life'' in the main game continues around you while you engage in the sub-game (thus, while playing, you waste both time and resources).
+Friendships grow when you play subgame with your neighbors.
+
+
+\subsection{Mitigating development risk}
+Though the second goal depends on the first goal, the first goal depends very little on the second goal.
+
+In other words, we can explore community issues in an abstract setting that does not include recreation at all.
+Furthermore, it is easy to ``tack'' recreation onto an existing game that already satisfies the first goal.
+Thus, to mitigate risk, the first goal is the main priority, and the second goal can be dealt with in a later mega-iteration {\it after} a polished game satisfying the first goal is complete.
+
+
+\subsection{Agile design}
+
+I am using agile techniques for the design as well as the development.
+Thus, I will not completely design the game, up front, in great detail.
+During each iteration, I will create a detailed design for that iteration.
+Thus, subsequent sections of this document will focus on design iterations.
+However, I already have a high-level sketch of the overall game in my head, and I will put it down on paper in the next section.
+
+
+\section{Overall Vision for game}
+
+Note that I am not including the game elements that satisfy the second goal in this vision statement.
+
+The playfield is a 2d map of limited size (maybe an island) and varied terrain.
+
+Each gardener picks a plot by drawing a single rectangle on the map.
+A gardener's rectangle can only be seen by that gardener---it is invisible to the other gardeners.
+Thus, the rectangle represents what the gardener {\it thinks} she owns, not what she actually owns.
+Gardeners can redraw their rectangles at any time.
+Gardeners can only plant and harvest from inside their rectangles.
+
+Gardeners start with a limited number of seeds.
+They can plant these in their rectangle and then care for the plants as they grow.
+There is a water source somewhere on the map, and they must haul water to their plants to keep them from dying.
+Eventually, plants bear fruit that can be harvested.
+Fruit can be eaten at any time to gain energy, and the seeds can be saved for later planting.
+Harvested fruit that is kept too long without being eaten eventually rots.
+
+Planting in another gardener's rectangle, or harvesting fruit from plants growing in another gardener's rectangle, makes that gardener mad at you.
+Of course, you cannot see the other gardener's rectangle, but you can guess where it is by looking at the location of the gardener's plants.
+Gardeners that become mad at you may purposely expand their rectangles into your space to ``steal'' fruit from your plants or plant seeds on your land.
+
+The main play mechanic here is deciding where to put your rectangle in the first place and when to expand or contract it.
+Should you fight with your neighbor, stand your ground, and keep pushing for more land, or should you back off a bit, maybe sacrificing a few of your plants in the process, to appease your neighbor?
+
+Giving another gardener extra produce will make that gardener like you, and friendly gardeners are more likely to give you produce in the future or deal more fairly with you when it comes to garden border squabbles. 
+
+Various activities, such as moving around, take energy, and more energy can be obtained by eating produce that contains a balance of particular nutrients.
+I am envisioning three nutrient types, Red, Green, and Blue.
+We can display our nutrient stockpiles (from what we have eaten) with three bars.
+Whenever there is at least one unit in each bar, one unit of each nutrient is combined to increase our energy bar by one unit.
+The energy bar can be white (the combination of Red, Green, and Blue, of course).
+
+Different plants produce different amounts and combinations of nutrients in their fruits, and the color of the fruit indicates which nutrients it contains.
+A yellow fruit would contain Red and Green but no blue.  (Think of the fabled ``white tomato'' that contains a perfect balance of all three nutrients).
+
+Different sections of land are particularly suited to different types of plants.
+Thus, certain plants thrive and produce a lot of fruit in one area while struggling and producing little fruit in another area.
+
+A life bar slowly decreases over time (and never increases), representing the fact that each gardener has a limited lifetime.
+If the energy bar hits zero at any point, the life bar decreases faster (and various activities that would normally consume energy faster consume the life bar faster).
+
+Plant manifestations are controlled by underlying genetics, and nearby plants can cross-pollinate to produce new varieties.
+
+If a given community member likes you enough, you can mate with him and produce two offspring, one for each of you to take car of.
+A newborn offspring is completely helpless for a while and need to be fed a balance of all nutrients for it to advance to adult status.
+Once it becomes an adult, an offspring ``moves out'' into the world to become another gardener and live under its own control.
+
+Once your lifebar hits zero, you die.
+Your control switches to your oldest adult offspring.
+If you have no living adult offspring when you die, the game is over (your genetic line is finished).
+
+How a neighbor reacts to you is controlled by its underlying genes (a series of parameters).
+Your genes change over time according to your behavior---in other words, the system search for genes that would best describe the actions that you take.
+A cross of your genes and your mate's genes are passed on to offspring.
+
+Sample genes:
+\begin{itemize}
+\item lifespan
+\item amount bothered by invasion
+\item amount bothered by theft
+\item tendency to invade
+\item tendency to steal
+\item dislike's effect on invasion tendency
+\item dislike's effect on stealing tendency
+\end{itemize} 
+
+Both offspring and plant seeds can be sent through some kind of portal into an online archive.
+These ``user creations'' will be downloaded into other player's game worlds.
+Thus, the desire to ``spread your genes'' can be carried farther than a single computer.
+
+The tangible goal for the player is to survive as long as possible.
+
+A viable strategy for achieving this goal will be slightly different for each game, and may vary throughout a particular game, due to:
+\begin{itemize}
+\item different terrains
+\item different neighbor parameters (and thus behaviors)
+\end{itemize}
+
+Thus, each game offers a new challenge, and something new to learn, because each game is slightly different.
+
+The hardness of a given game can be determined by:
+\begin{itemize}
+\item the total available land area
+\item the number of other gardeners present
+\item the number of seeds you start with
+\end{itemize}
+
+There are two possible tracks here:
+\begin{enumerate}
+\item We could set up artificial challenges for the player (such as, ``survive for at least 20 minutes in this level, and then you can move on to the next, harder level'') that increase in difficulty
+\item We could somehow build a system that results in gameplay that automatically becomes more difficult over time (through a gradual, and natural, increase in population, for example).
+\end{enumerate}
+The second option sounds more interesting, but we could fall back on the first option if we cannot get the second option tuned properly.
+Also, the second option may annoy advanced players because they cannot jump right to a ``hard'' challenge when they start a new game.
+For these players, we could imagine a feature that lets the world start and advance through time without them for a while---then they could jump in and compete with already-established gardeners.      
+   
+
+\section{Iteration 1}
+
+Features in this iteration:
+\begin{itemize}
+\item gardeners, with one gardener controlled by player
+\item movement
+\item plot rectangles
+\item planting
+\item hauling water
+\item harvesting and eating for energy
+\item simple like/dislike metric for all pairs of gardeners
+\end{itemize}
+
+Not in this iteration:  actions based on like/dislike, nutrition, food storage after harvest (eat immediately on harvest), seeds (click to plant, no limit on planting), multiple fruits per plant.
+
+
+\subsection{I/O}
+
+\subsubsection{Input}
+Mouse interface with only single-button clicking (and no dragging).  
+
+\paragraph{One-click actions}
+\begin{itemize}
+\item Click empty space to move.  
+\item Click ripe plant to harvest it.
+\item Click neighbor to display like/dislike for you.
+\item Click ``plant'' button when inside plot to start a plant in current location.
+\item Click ``grab water'' when standing on water source to fetch a unit of water.
+\item Click ``dump water'' button when standing on a plant to water it.
+\end{itemize}
+
+\paragraph{Two-click actions}
+\begin{itemize}
+\item None.
+\end{itemize}
+
+\paragraph{Three-click actions}
+\begin{itemize}
+\item Click ``plot'' button, then click map to specify one corner of plot.  Click map again to specify second corner of plot. 
+\end{itemize}
+
+\subsubsection{Output}
+
+Entire map is displayed in one window with a black background.
+Water source is a blue triangle.
+Player's gardener is a solid white square.  
+Other gardeners are different color squares.
+Player's plot is a hollow white rectangle.
+
+Plants are hollow green triangles when growing and solid green triangles when ready to harvest.
+Hollow in an unripe triangle is filled with blue to indicate water status.
+Bright blue means full water, black means about to die.
+
+Player's energy is a bar.
+
+Like/dislike metric is printed to standard out.
+
+
+\subsection{Game structure}
+
+Other gardeners pick reasonably-sized plots at random.  
+They plant in these plots at random.
+They water their plants using a greedy method (most dry plant first).
+
+Their dislike grows one unit every time a gardener plants in their plot.
+Their dislike grows two units every time a gardener harvests from a plant in their plot.
+
+\subsection{Program structure}
+ 
+All gardeners (including player's gardener) are represented in the same way as an object with state.
+Gardener state includes energy count, a flag for carrying water, and a possible destination (if moving).
+
+World state includes a list of gardener objects and a world position for each gardener.
+World state also contains plot coordinates for each gardener and coordinates for each plant object.
+Plant objects track growth progress and water status of each plant.
+ 
+A table structure can track like/dislike metrics for all pairs of gardeners.
+
+An AI controller objects direct computer-controlled gardeners
+
+
+Objects for this iteration:
+\begin{itemize}
+\item World
+\item Gardener
+\item Plant
+\item FriendshipTracker
+\item GardenerAI
+\end{itemize}
+
+
+
+
+\section{Iteration 2}
+
+Start with Iteration 1 as a base.
+
+Features added in this iteration:
+\begin{itemize}
+\item Storage of harvested produce.
+\item Stored produce eventually rots.
+\item Gifts of harvested produce.
+\item Graphical representation of reactions to encroachment (directed anger) or good works (directed gratitude).
+\item Actions directed by emotions (gifts and counter-encroachment).
+\end{itemize}
+
+\subsection{I/O}
+
+\subsubsection{Input}
+
+\paragraph{New One-click actions}
+\begin{itemize}
+\item Click harvest button to harvest plant.
+\item Click stored fruit to select it.
+\item Click gift button to give selected stored fruit to closest neighbor.
+\item Click eat button to eat selected stored fruit.
+\end{itemize}
+
+\paragraph{New Two-click actions}
+\begin{itemize}
+\item None.
+\end{itemize}
+
+\paragraph{New Three-click actions}
+\begin{itemize}
+\item None.
+\end{itemize}
+
+
+\subsubsection{Output}
+Multi-item grid display in sidebar of stored fruits.  Rotting fruit triangles get shorter and shorter.  During a gift action, a small fruit icon ``flies'' from the giver to the receiver.
+
+Reactions to good or bad acts are displayed with green ``+'' or red ``x'' icons flying from the reactor to the actor.
+
+ 
+
+\subsection{Program structure}
+
+Harvested fruit stored in the Gardener object.
+
+
+
+
+
+
+\section{Iteration 3}
+
+Start with Iteration 2 as a base.
+
+Features added in this iteration:
+\begin{itemize}
+\item Variable soil types around island.
+\item Soil type at a given spot is along a spectrum from green to brown.
+\item Plant parameter indicating preferred soil type.
+\item Maturation time extended when plant placed in less-than-ideal soil.
+\item Plant seeds (each gardener starts out with a supply of seeds).
+\item Three nutrient types (Red, Green, and Blue).
+\item One unit of each nutrient needed to produce one unit of energy.
+\item Plant parameters indicating nutrient profile of plant's fruit.
+\item Eating a fruit leaves behind an unlimited supply of seeds for that plant.
+\item Parameters in seeds of a fruit are the result of a cross between the parent plant and the closest other plant.
+\end{itemize}
+
+\subsection{I/O}
+
+\subsubsection{Input}
+
+\paragraph{New One-click actions}
+\begin{itemize}
+\item Click stored fruit to select it.
+\item Click eat button to eat selected fruit.
+\item Click stored seeds to select them.
+\item Click plant button to plant a seed from the selected seeds.
+\item Click gift button to give fruit or seeds to closest neighbor.
+\end{itemize}
+
+\paragraph{New Two-click actions}
+\begin{itemize}
+\item None.
+\end{itemize}
+
+\paragraph{New Three-click actions}
+\begin{itemize}
+\item None.
+\end{itemize}
+
+
+\subsubsection{Output}
+
+Soil type is indicated by color of map.
+Fruit color indicates a fruit's nutritional profile.
+Seed color indicates a seed's preferred soil type.
+
+New multi-bar display on each gardener.  Horizontal white bar displays energy.  Vertical red, green, and blue bars display current nutrient levels.
+ 
+
+\subsection{Program structure}
+
+New objects for this iteration:
+\begin{itemize}
+\item SoilMap
+\item Seed
+\end{itemize}
+
+
+
+
+
+
+\section{Iteration 4}
+
+Start with Iteration 3 as a base.
+
+Features added in this iteration:
+\begin{itemize}
+\item Reduce size of island and number of gardeners (to make game easier to understand).
+\item Make plants permanent (watered until maturity, then bearing fruit periodically after that).
+\item Prevent plants from being planted close together (with graphic to show planting radius).
+\item Parameterize gardener behavior with genetics.
+\item Offspring gardeners that are cross of parents.
+\item Can only mate with gardeners that like you.
+\item Each gardener gets one offsping as result of mating.
+\item Offspring start out immature and immobile.  Must be carried by parent (pregnant).
+\item Carrying offspring slows gardener down and consumes nutrients faster.
+\item An imbalance of nutrients prolongs pregnancy.
+\item After offspring ``born,'' it enters world as a computer-controlled gardener.
+\item Upon death, player can take over control of oldest living offspring and play on. 
+\end{itemize}
+
+Not in this iteration:  ``learning'' genetics from a player's actions.  Player's gardener starts out with random genetics just like other gardeners.
+
+\subsection{I/O}
+
+\subsubsection{Input}
+
+\paragraph{New One-click actions}
+\begin{itemize}
+\item Click mate button to mate with closest other gardener.
+\end{itemize}
+
+\paragraph{New Two-click actions}
+\begin{itemize}
+\item None.
+\end{itemize}
+
+\paragraph{New Three-click actions}
+\begin{itemize}
+\item None.
+\end{itemize}
+
+
+\subsubsection{Output}
+``Circle'' around plant when close to it showing nearby unplantable area.  Pregnancy represented by growing ``bulge'' on bottom of gardener.
+
+
+\subsection{Program structure}
+
+New objects for this iteration:
+\begin{itemize}
+\item None.
+\end{itemize}
+
+
+
+
+\end{document}

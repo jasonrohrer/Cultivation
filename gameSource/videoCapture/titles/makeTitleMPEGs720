@@ -1,0 +1,20 @@
+
+
+# for each title
+
+for i in `seq 0 11`;
+do
+
+   # for each of 90 frames (3 seconds of video at 30 frames per second)
+
+   for f in `seq 0 89`
+   do 
+       # use bc to do floating point calculation
+       # from 0.75 to 1.00 over 90 steps
+       scale=`echo "scale=4; 0.75 + 0.25 * ( $f / 89 )" | bc`
+       
+       echo "Making file title_"$i"_"$f".jpg"
+       ./scaleOverlayImage title_background.jpg title_"$i".jpg  "$scale" title_"$i"_"$f".jpg
+
+   done
+done

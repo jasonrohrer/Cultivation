@@ -1,0 +1,6 @@
+
+# 2 passes
+
+~/ffmpeg-0.5/ffmpeg -r 29.97 -i video/video_8_%d.jpg -i Monolith__07_815_Piano.mp3 -f mov -vcodec libx264 -r 29.97 -b 1250k -acodec libfaac -ar 44100 -ab 64k -pass 1 -y cultivation_TimeLapse.mov
+
+~/ffmpeg-0.5/ffmpeg -r 29.97 -i video/video_8_%d.jpg -i Monolith__07_815_Piano.mp3 -f mov -vcodec libx264 -r 29.97 -b 1250k -acodec libfaac -ar 44100 -ab 64k -pass 2 -y cultivation_TimeLapse.mov

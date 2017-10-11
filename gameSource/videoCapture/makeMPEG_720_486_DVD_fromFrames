@@ -1,0 +1,32 @@
+# Should probably use ac3 for audio and mpeg2 for video
+# See here for details:
+# http://gentoo-wiki.com/HOWTO_Create_a_DVD%3AEncode
+#
+# using -target ntsc-dvd in ffmpeg, we see
+#
+# Output #0, dvd, to 'temp.mpg':
+#
+# Stream #0.0, 29.97 fps(c): Video: mpeg2video, yuv420p, 720x480, q=2-31, 6000 kb/s
+# Stream #0.1: Audio: ac3, 48000 Hz, stereo, 448 kb/s
+#
+# See also:  http://www.videohelp.com/dvd
+#
+# But she wants 486, not 480, vertical
+#
+
+
+echo "Making MPEG1 file in 2 passes"
+
+/data5/jcr13/downloads/ffmpeg/ffmpeg -r 29.97 -i frames/frame_%d.jpg -i music2.aiff -f mpeg -vcodec mpeg1video -r 29.97 -b 6000k -acodec mp2 -ar 44100 -ab 192k -pass 1 -y cultivation_720_486_dvdQuality.mpg
+
+/data5/jcr13/downloads/ffmpeg/ffmpeg -r 29.97 -i frames/frame_%d.jpg -i music2.aiff -f mpeg -vcodec mpeg1video -r 29.97 -b 6000k -acodec mp2 -ar 44100 -ab 192k -pass 2 -y cultivation_720_486_dvdQuality.mpg
+
+
+echo "Making VOB file in 2 passes"
+
+/data5/jcr13/downloads/ffmpeg/ffmpeg -r 29.97 -i frames/frame_%d.jpg -i music2.aiff -f dvd -vcodec mpeg2video -r 29.97 -b 6000k -acodec ac3 -ar 48000 -ab 448k -pass 1 -y cultivation_720_486_dvdQuality.vob
+
+/data5/jcr13/downloads/ffmpeg/ffmpeg -r 29.97 -i frames/frame_%d.jpg -i music2.aiff -f dvd -vcodec mpeg2video -r 29.97 -b 6000k -acodec ac3 -ar 48000 -ab 448k -pass 2 -y cultivation_720_486_dvdQuality.vob
+
+
+

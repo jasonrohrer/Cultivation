@@ -1,0 +1,286 @@
+Cultivation
+http://cultivation.sf.net
+
+by Jason Rohrer
+http://hcsoftware.sf.net/jason-rohrer
+
+
+
+
+Introduction
+
+This game is about a community of gardeners raising food for themselves in a 
+shared space.
+
+There is no "right" way to play Cultivation---it is a dynamic system that you
+can interact with in a variety of ways.  In fact, you may notice that two
+runs through Cultivation can be quite different.
+
+This flexibility is balanced with one hard limit:  the game ends when your 
+genetic line becomes extinct.  Thus, an implicit goal is to keep your line 
+alive for as long as possible, which will give you more time to pursue 
+whatever goals you set for yourself.
+
+Your eventual goal in the game, should you chose to pursue it, is to open a 
+gate to immortality and lead some of your fellow gardeners through it.
+Achieving this goal wins the game and gives you a reward.
+
+This rather brief document should get you started playing Cultivation.  You can
+also learn to play by going through the in-game tutorial.
+
+
+
+
+Cultivation is Free
+
+I have placed Cultivation, and the underlying source code, in the public 
+domain.  You are free to do whatever you want with it.
+
+However, I spent many months working on it, and my family and I do need to
+eat.  If you got some enjoyment out of Cultivation, and you can afford it, 
+please stuff a few dollars in an envelope and send it to:
+
+Jason Rohrer
+93 Elm St.
+Potsdam, NY 13676
+
+You can also donate online, and read about my family's simple lifestyle (my
+wife, child, and I live on less than $10,000 per year), here:
+
+http://hcsoftware.sf.net/jason-rohrer/supportMyWork.php
+
+
+
+
+Translations
+
+Cultivation was originally released in English, my native language.  However,
+it uses a translation engine when rendering text.  The upshot is that it is
+very easy to translate Cultivation into other languages.  
+
+Cultivation ships with both English and French language files.  The default is
+English.  To switch to French, open the file "language.txt" in a text editor,
+delete the word English, and type the word French.
+
+To create your own translation, you can start with "English.txt" or 
+"French.txt" as a template.  Drop your new language file into the "languages"
+folder, and of course edit "language.txt" to select your language.
+
+
+
+
+System Speed Issues
+
+Cultivation should be playable on a variety of systems.  It has been played
+on a 166 MHz machine with a 3D card, as well as a 250 MHz machine with no
+3D card, during testing.  On these "slow" systems, the game was playable, but
+certainly not smooth.  
+
+A 400 MHz machine with a 3D card should produce a rather smooth play 
+experience. 
+
+If you have a slower system or no 3D card, the frame rate in Cultivation may
+be choppy.  Play will become smoother if you disable some of the more
+complicated graphical elements.  Take a look at the file "features.txt" in
+your Cultivation folder.  Changing a "1" to a "0" will switch a feature off.
+You must quit and re-launch Cultivation for your changes to take effect. 
+
+
+
+
+Controls
+
+This game is played entirely with a single mouse button (the left mouse button, if you happen to have more than one).  The keyboard is never used in the game.
+
+The most basic control is a single click on the play surface to move your 
+gardener.
+
+All other actions are controlled with the buttons displayed at the bottom and
+left side of the screen.  Buttons are enabled based on the actions that are 
+possible at your gardener's current location.
+
+For example, after clicking the Set Plot button, you can select a plot of land
+by clicking and dragging a rectangular area on the play surface.
+
+On the bottom bar, from left to right, you will see the following buttons 
+(each button icon is described in brackets).  Note that when you start the
+game, many of these buttons will be disabled, so you will not be able to see
+all of the icons:
+
+--Plant           [Greenish leaf shape of the plant that will result]
+
+--Set Plot        [White square]
+
+--Water           [Blue circle]
+
+--Harvest Fruit   [Image of fruit that will be picked]
+
+--Mate            [Image of two gardeners together]
+
+--Lead            [Image of one gardener following another]
+
+--Poison          [Black circle]
+
+--Pause           [Two vertical, yellow lines]
+
+--Quit            [Red x]
+
+
+The left side bar shows your gardener's stored items.  There are two buttons 
+at the top, above the storage area:
+
+--Give Gift of Selected Fruit   [Fruit with white arrow]
+
+--Eat Selected Fruit            [Fruit with white chomper]
+
+
+Below the storage area, at the bottom of the left sidebar, there is one button:
+
+--Discard Selected Item         [White x over the item]
+
+
+All gardeners start the game with three seeds in their storage areas.  To find
+your starting seeds, look above the discard button in your storage area:  you
+will see three items featuring inverted brown triangles.  As you harvest fruit
+and eat it, you can obtain more seeds.
+
+
+
+
+Nutrient Usage
+
+There are three nutrients in the game, Red, Yellow, and Purple.
+
+Standing still consumes the least amount of nutrients.  Moving around consumes
+more, and so does holding water.  Moving while carrying water consumes the
+greatest amount of nutrients.  Being pregnant also increases nutrient usage.
+
+When your gardener exhausts its supply of a given nutrient, it ages faster.
+The speed of aging increases as additional nutrients are exhausted.
+
+Eating fruit replenishes exhausted nutrients.  Fruit is colored according
+to its highest nutrient.
+
+
+
+
+Gate to Immortality
+
+The gate has five rings that must each be opened before the gate itself opens.
+Rings are opened by the death of the gardener that you are controlling.  The
+first time your gardener dies, you will see the first ring appear at the 
+location of its death.
+
+To open additional rings, you must make sure you move your next gardener back 
+to the gate right before it dies.  If your next gardener dies away from the
+partially-opened gate, an additional ring will not open.
+
+After the fifth ring is opened, the gate itself will open.  At that point, any
+gardener that moves into the center of the gate will pass into limbo and await
+immortality.  To finish the job, you must pass your gardener through the 
+gate too, which will cause the gate to close.  Your gardener, and whatever
+other gardeners passed through the open gate, will become immortal.  What about
+the other gardeners who did not pass through the gate?  They're stuck on the
+island.
+
+
+
+
+Play Hints
+
+The descriptions given above should be enough to get you started.  If you are
+stuck or confused, here are some hints:
+
+--Draw a plot for yourself, plant some plants in the plot, keep them watered
+  until they are done growing, harvest fruit when it becomes ripe (after the 
+  flowers die back) and then eat the resulting fruit to gain more nutrients.
+
+--When you click the Plot button, a cross-hair is shown as you move your mouse
+  around the map.  Click once on the map to set the first corner of your plot,
+  and click a second time to set the opposite corner of your plot.
+
+--Pick up water by moving into the water and clicking the Water button.
+  Dump water on a plant by moving near the plant and clicking the Water button
+  again.
+
+--A tan circle over a plant means it needs more water to finish growing.
+  After a plant is done growing, you no longer need to water it.
+
+--You can only plant, water, and harvest in your own plot.  You can draw a 
+  new plot for yourself at any time.  Your plot can intersect with the plots
+  of others (intersecting plots are the main sources of conflict).
+
+--You can only plant if you have seeds selected in the storage area.  The
+  Plant button shows the leaf shape of the plant that will grow from the
+  selected seed.
+
+--Dark seeds (with white backgrounds) prefer dark soil.  Light seeds (with
+  black backgrounds) prefer light soil.  The color under a seed indicates
+  the color of the fruit that will result.
+
+--Give gifts of fruit to other gardeners.  If they like you, they will give 
+  gifts back.  If they like you a lot, you may be able to mate with them.
+  If they adore you, they may even let you lead them.
+
+--Pregnancy progress stalls if you are low on any nutrient.
+
+--When a baby is following you, it shares all of the food you eat.  The baby 
+  stops growing when it is low on any nutrient.
+
+--Any gardeners that you are leading also share all of the food you eat.
+
+--Fruit rots eventually, so harvest it and use it quickly.  Rotting fruit
+  turns white and shrinks.
+
+--Keep an eye on the buttons that are enabled.  The state of the buttons tells
+  you what actions are available in a given situation.  For example, to tell
+  when fruit is ripe on a nearby plant, watch for the harvest button to become
+  enabled.
+
+--Watch for flying emotions.  If you're doing something to please or anger a
+  neighbor, the neighbor will let you know.  Anger is displayed with a red "x"
+  symbol, and pleasure is displayed with a green "+" symbol. 
+
+--If you mate with a gardener that another gardener likes a lot, you will
+  make that other gardener angry.  Chose a mate with care.
+
+--Click the Poison button when near a plant to poison it.  The plant will
+  die, and the soil around it will become forever unusable.  Poisoned soil
+  turns black.
+
+--Fighting gardeners can ruin the island for everyone.  You can use the Lead
+  button to quell a fight.
+
+--You can't plant anything in the water.
+
+--When you die, you take over control of your oldest living descendent.
+  When you run out of descendents (in other words, when your genetic line
+  is extinct), the game is over.
+
+--After the game is over, you can still move around the play surface to watch
+  what happens with the other gardeners.  Clicking the Restart button will
+  start a new game.
+
+--To successfully open the gate, you must survive through at least five 
+  generations and make sure that each of your gardeners dies where the first
+  one died.  Each death will open a new ring of the gate.
+
+--Only the gardener you are controlling can open a gate ring by dying.  Deaths
+  on the part of other gardeners, even your own offspring that you are not
+  yet controlling, has no effect on the gate.
+
+--If you walk across poisoned ground, some of the fruit you are carrying will
+  become poisoned.  Eating poisoned fruit can offer you a quick-and-painless
+  death (which might be convenient if you are trying to open the next ring of
+  the gate).
+
+--A gate is destroyed if the ground under it becomes poisoned.  A new gate
+  cannot be started on ground that is already poisoned.
+
+--A gate can be opened over the water.
+
+--What does immortality mean?  After you successfully close a gate, take a 
+  look in your Cultivation folder.  You'll be rewarded with some soul trails.
+
+
+

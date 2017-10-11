@@ -1,0 +1,4 @@
+# letterbox to change aspect ratio from 3:2 to 4:3
+
+/data5/jcr13/downloads/ffmpeg/ffmpeg -r 30 -i frames/frame_%d.jpg -i music2.aiff -f mpeg -vcodec mpeg1video -r 30 -b 466k -s 320x216 -padtop 12 -padbottom 12 -acodec mp2 -ab 128k cultivation_320_240_letterbox.mpg
+

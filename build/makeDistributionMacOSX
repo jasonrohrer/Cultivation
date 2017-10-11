@@ -1,0 +1,52 @@
+#!/bin/sh
+
+#
+# Modification History
+#
+# 2006-July-13   Jason Rohrer
+# Copied from Transcend build.
+#
+
+
+if [ $# -lt 2 ] ; then
+   echo "Usage: $0 release_name unix_platform_name"
+   exit 1
+fi
+
+
+rm -rf mac
+
+mkdir mac
+
+mkdir mac/Cultivation
+mkdir mac/Cultivation/languages
+
+
+
+
+cp -r macOSX/game2.app mac/Cultivation/Cultivation.app
+cp ../gameSource/Cultivation mac/Cultivation/Cultivation.app/Contents/MacOS
+
+cp ../documentation/how_to_*.txt mac/Cultivation
+cp ../gameSource/features.txt mac/Cultivation
+cp ../gameSource/language.txt mac/Cultivation
+cp ../gameSource/font.tga mac/Cultivation
+
+cp ../gameSource/languages/*.txt mac/Cultivation/languages
+
+
+rm -r mac/Cultivation/Cultivation.app/CVS
+rm -r mac/Cultivation/Cultivation.app/Contents/CVS
+rm -r mac/Cultivation/Cultivation.app/Contents/MacOS/CVS
+rm -r mac/Cultivation/Cultivation.app/Contents/Resources/CVS
+
+
+cd mac
+tar cf "Cultivation_$1_$2.tar" Cultivation
+gzip "Cultivation_$1_$2.tar"
+
+
+
+
+
+

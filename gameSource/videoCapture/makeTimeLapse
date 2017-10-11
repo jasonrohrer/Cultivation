@@ -1,0 +1,6 @@
+
+# 2 passes
+
+ffmpeg -r 29.97 -i video/video_8_%d.jpg i- Monolith__07_815_Piano.mp3 -f mpeg -vcodec mpeg1video -r 29.97 -b 5000k -acodec mp2 -ar 44100 -ab 192k -pass 1 -y cultivation_TimeLapse.mpg
+
+ffmpeg -r 29.97 -i video/video_8_%d.jpg -i Monolith__07_815_Piano.mp3 -f mpeg -vcodec mpeg1video -r 29.97 -b 5000k -acodec mp2 -ar 44100 -ab 192k -pass 2 -y cultivation_TimeLapse.mpg

@@ -1,0 +1,10 @@
+largeWindow 1
+drawClouds 1
+drawSurfaceNoise 1
+drawNiceCircles 1
+drawNicePlantLeaves 1
+drawComplexGardeners 1
+drawSoil 1
+drawWater 1
+drawShadows 1
+drawComplexPortal 1

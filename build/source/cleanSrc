@@ -1,0 +1,9 @@
+rm -r minorGems/ai
+rm -r minorGems/bench
+rm -r minorGems/doc
+rm -r minorGems/examples
+rm -r minorGems/temp
+
+rm -r game2/gameSource/videoCapture
+rm -r game2/documentation/slamdance
+rm -r game2/documentation/html

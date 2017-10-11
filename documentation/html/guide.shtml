@@ -1,0 +1,135 @@
+<HTML>
+
+
+<HEAD>
+<TITLE>Cultivation Guide</TITLE>
+</HEAD>
+
+
+<BODY BGCOLOR=#FFFFFF TEXT=#000000 LINK=#0000FF VLINK=#FF0000>
+
+<CENTER>
+<H1>Cultivation Guide</H1>
+
+<TABLE WIDTH=75%>
+<TR>
+<TD>
+
+As of version 7, the information in this guide has been replaced by an in-game tutorial.  
+I'm leaving this guide online as an item of historical interest.<BR>
+<BR>
+
+<HR>
+<BR> 
+
+The <A HREF="http://hcsoftware.cvs.sourceforge.net/*checkout*/hcsoftware/tempProjects/game2/documentation/how_to_play.txt?revision=HEAD">how_to_play.txt</A> included with your Cultivation download should provide enough basic play instructions to get you started.  
+This guide is meant to be a graphical supplement to that text file.  
+
+
+<H2>Game Controls</H2>  
+
+When you start Cultivation, you will be presented with a view that looks something like the following picture.
+The screens shown are small to fit in a web browser.
+Don't forget to increase the size of your Cultivation window before playing.
+Labels have been added to the various controls.
+<BR><BR>
+<CENTER>
+<IMG SRC="guideImages/startDiagram.png">
+</CENTER>
+<BR>
+First, notice the <B>storage area</B>---it contains three seeds.
+These can be used to start three plants.
+The top two seeds are light in color (with a black background for contrast), so they prefer light soil.
+The bottom seed is dark (with a white background), so it prefers dark soil.
+The top and bottom seeds will produce yellow fruit (highest in the yellow nutrient), while the middle seed will produce red fruit.
+The bottom seed is selected and is therefore pictured on the Discard button under a white X.  Clicking Discard would drop the seed from our storage area.
+Since we cannot eat seeds or give them as gifts, both the Eat and the Give buttons are disabled.<BR>
+<BR>
+Our gardener is in the center of the screen.
+The purple, yellow, and red circles on our gardener show its nutrient levels.
+Right now, we are about half full of each nutrient.<BR>
+<BR>
+The most basic control is for movement:  we can click the map to move our gardener.<BR>
+<BR>
+Now we will examine the control buttons at the bottom of the screen.
+Only two buttons are enabled:  the Set Plot button and the Quit button.
+Before planting seeds, watering them, and harvesting the resulting fruit, we must select a plot of land to cultivate.
+Clicking Set Plot will show a cross-hair as we move our mouse across the map.
+Clicking the map once will set the first corner of our plot, then clicking a second time will set the opposite corner.<BR>
+<BR>
+After we create a plot, the Plant button will become enabled if we move our gardener into our plot.
+After planting, we can water our plants by walking to the water, clicking the Water button to pick up water, walking back to a dry plant, and clicking the Water button again to dump water on the plant. 
+<BR>
+<BR>
+Later in the game, your screen may look something like this:
+<BR><BR>
+<CENTER>
+<IMG SRC="guideImages/midGameDiagram.png">
+</CENTER>
+<BR>
+First, look again at the storage area.  
+There is one harvested fruit waiting to be eaten or given as a gift.
+That fruit is selected, so the Eat button is enabled.
+The Give button is still disabled because there is no other gardener close enough to receive a gift from us.
+If we were to move our gardener closer to another gardener, the Give button would become enabled.<BR>
+<BR>
+The selected fruit is yellow, which means that it is high in the yellow nutrient.
+Note that the three nutrient circles on our gardener are completely empty, so our gardener is in need of all three nutrients.
+Eating the yellow fruit would be wise at this point.
+If we wait too long to eat or give a stored fruit, it will start to shrink and turn white---that means it is rotting.
+After it rots fully, it will be dropped from our storage area.<BR>
+<BR>
+In our plot, there is one mature plant.
+We no longer need to water it, and it has a flower and some ripe fruits.
+Since we are standing near the fruit, the Harvest button is enabled, and it shows a picture of the fruit that will be harvested.
+The other plant in our plot is not yet mature.
+The tan circle over it means that it needs water in order to grow more.<BR>
+<BR>
+Note that the Poison button is also enabled now.
+That is because we are standing close to a plant.
+We can poison any plant in the game, even our own.
+Poisoning kills the plant and renders the surrounding ground unusable forever.<BR>
+<BR>
+Also note that the Mate button is disabled on the above screen.
+First of all, no gardener is near enough for us to mate with it.
+Even if we were close enough, social factors may prevent us from mating.
+Gardeners will refuse to mate with us if they do not like us enough.
+The Lead button is also still disabled, for similar reasons.
+
+<H2>Life, Death, and Immortality</H2>  
+
+When you start the game, you will see a ball of churning plasma in your gardener's body.  As your gardener ages, the plasma shrinks.  The very first screen in this guide shows our gardener with a full ball of plasma, while the second screen shows our gardener with a rather small ball remaining.<BR>
+<BR>
+When the plasma ball shrinks down to nothing, our gardener will die.  Eventual death for each gardener is unavoidable.  However, we can slow down the aging process by keeping our gardener well-nourished.  Near death, our gardener will starts to fade away, like this:
+<BR><BR>
+<CENTER>
+<IMG SRC="guideImages/dyingScreen.png">
+</CENTER>
+<BR>
+Each time the gardener that we are controlling dies, a new ring is opened in the gate to immortality.  Here is a screen taken after our first death when the first ring opened:
+<BR><BR>
+<CENTER>
+<IMG SRC="guideImages/ringScreen.png">
+</CENTER>
+<BR>
+Our eventual goal in the game is to open all five rings so that the gate itself opens.
+To open the next ring, we must bring our next gardener back to the center of the ring before it dies.
+If our next gardener dies elsewhere, away for the partially-open gate, no new ring will open.<BR>
+<BR>
+But where does our "next gardener" come from?  After dying, if we have any offspring, we will take control of the oldest living offspring and continue playing.  Thus, to extend our play time, and have a chance at opening the gate, we must successfully mate and nurture the resulting offspring.<BR>
+<BR>
+After the gate is open, any gardener that steps into it will pass into limbo to await immortality.
+When our gardener finally steps into the gate, the gate will close, and all of the gardeners that have passed through it so far will be immortalized.
+Thus, once the gate is open, we need to carefully lead some fellow gardeners through it without stepping into it ourselves.
+When the gate closes, we will receive our reward, which varies in size and quality depending on the group of gardeners that we chose to save.<BR>
+<BR>
+In the case shown in the above screen, we had no offspring when our gardener died, so the game ended with just one ring open.  Notice that the green Reset button is now enabled.
+</TD>
+</TR>
+
+</TABLE>
+</CENTER>
+
+</BODY>
+
+</HTML>

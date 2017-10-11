@@ -1,0 +1,1 @@
+/data5/jcr13/downloads/ffmpeg/ffmpeg -r 30 -i frames/frame_%d.jpg -i music2.aiff -f mpeg -vcodec mpeg1video -r 30 -b 1864k -acodec mp2 -ab 128k cultivation_720_486.mpg

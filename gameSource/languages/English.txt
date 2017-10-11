@@ -1,0 +1,191 @@
+tip_PlantButton   "Plant selected seed"
+tip_PlotButton    "Pick a new plot of land"
+tip_water_pickup  "Pick up "
+tip_water_dump    "Dump "
+tip_WaterButton	  "water"
+tip_HarvestButton "Harvest fruit"
+tip_MateButton    "Mate"
+tip_lead          "Lead "
+tip_stop_leading  "Stop leading "
+tip_LeadButton    "another gardener"
+tip_PoisonButton  "Poison a plant"
+tip_PauseButton   "Pause"
+tip_RestartButton "Restart"
+tip_QuitButton    "Quit"
+tip_EatButton     "Eat selected fruit"
+tip_GiftButton    "Give selected fruit"
+tip_DiscardButton "Discard selected item"
+tip_fruit         "Stored fruit "
+tip_poisoned      "(poisoned)"
+tip_seed          "Stored seed "
+tip_darkSoil      "-- likes dark soil"
+tip_lightSoil     "-- likes light soil"
+tip_StopTutorial  "Stop tutorial"
+tip_NextTutorial  "Continue tutorial"
+
+
+
+tutorial_question    "Would you like to view the tutorial?  Click the green Continue button to start the tutorial, or click the red Stop button to skip the tutorial."
+
+
+tutorial_welcome1     "The tutorial window freezes the game in the background.  When you're done reading a given tutorial message, click the green Continue button."
+
+
+tutorial_welcome2     "This tutorial will walk you through a full game of Cultivation.  Fair warning:  it may reveal details and strategies that would be more fun to discover on your own."
+
+
+tutorial_moving   "First things first:  moving around.  Click on the map to move your gardener.  Click the green Continue button to try it."
+
+
+tutorial_survival1   "Your first goal is basic survival.  If you don't eat, your nutrients will become depleted, and you will age faster."
+
+
+tutorial_survival2   "There are three nutrients:  Red, Yellow, and Purple.  The three spheres at the rear of your gardener show your nutrient levels."
+
+
+tutorial_survival3   "You use nutrients faster when you are actively moving around or carrying something like water."
+
+
+tutorial_survival4   "You can replenish nutrients by eating fruit, but you need to obtain some first.  One way to get fruit is to grow it yourself."
+
+
+tutorial_seeds1   "You start the game with some seeds stored in your left side bar.  You can plant them to grow fruit."
+
+
+tutorial_plot   "But before you can do that, you need to pick a plot of land for yourself.  Click the Plot button and then click-and-drag a rectangle on the map."
+
+
+tutorial_plant   "Now move into your plot, click a stored seed to select it, and then click the Plant button."
+
+
+tutorial_water1   "Your seedling needs water to grow.  Move into the water and press the Water button to pick up water."
+
+
+tutorial_water2   "Move back to your seedling and press the Water button again to dump the water."
+
+
+tutorial_water3   "A tan circle over a plant means it has stopped growing and needs more water.  Once a plant is full-grown, you can stop watering it."
+
+tutorial_plot2   "You can only tend plants that are in your plot, but you can change your plot at any time."
+
+tutorial_plot3   "Your plot can overlap with the plots of other gardeners.  In that case, you and the others would be in conflict over the plants in the overlap."
+
+
+
+tutorial_harvest1   "You have some ripe fruit in your plot.  Move near the plant and press the Harvest button."
+
+
+tutorial_eat1   "A fruit is now stored in your left side bar.  Click the fruit to select it, and then click the Eat button to eat it."
+
+tutorial_eat2   "A fruit of a given color is high in that color nutrient, but it contains only trace amounts of the other color nutrients."
+
+tutorial_seeds2   "Notice that eating a fruit gave you another stored seed.  Each fruit contains one seed."
+
+tutorial_seeds3   "The color of a seed shows what kind of soil it prefers.  Light seeds like light soil, and dark seeds like dark soil.  An ideal soil type makes a plant grow faster."
+
+tutorial_seeds4   "The colored circle next to each seed shows what color fruit will be produced by the resulting plant."
+
+tutorial_seeds5   "To produce fruit, plants crossbreed with whatever plant is closest to them.  Seeds from the resulting fruit will grow genetic hybrid plants."
+
+tutorial_seeds6   "By placing certain plants close together, you can selectively breed desirable traits.  For example, you might try to breed plants with heavy fruit loads."
+
+
+
+
+
+tutorial_gift1   "You can also give fruit to another gardener.  First, move near the other gardener.  Click the fruit to select it, and then click the Give button."
+
+
+tutorial_emotion1   "Your gift made that gardener like you a bit more.  The green + that flew back to you indicated the other gardener's pleasure."
+
+
+tutorial_emotion2   "If you see a red x flying toward your gardener, that means you are making another gardener angry."
+
+tutorial_emotion3   "You can make other gardeners angry by planting in their plots or harvesting from their plants.  This can only happen if your plots overlap."
+
+
+
+tutorial_lifespan1   "Your lifespan is represented by the plasma ball at the center of your gardener.  It just shrunk to half its size, so that means your life is half over."
+
+tutorial_lifespan2a   "You already have produced an offspring, so you will take control of that offspring when you die."
+
+tutorial_lifespan2b   "You're already pregnant.  If you can successfully give birth before you die, you will take control of that offspring when your current life ends."
+
+tutorial_lifespan2c   "Your biological clock is ticking.  It's time to think about mating.  If you have no offspring when you die, your game will end."
+
+
+tutorial_mating1   "To mate, move near another gardener.  If they like you enough, and if they are not already pregnant, the Mate button will be enabled."
+
+
+tutorial_mating2   "If they don't like you enough to mate, give them a gift or two.  What's that old saying... Candy is dandy?  Well, fruit will have to suffice."
+
+tutorial_mating3   "You can make another gardener angry by mating with a gardener that it likes a lot.  Be careful when you pick a mate."
+
+
+tutorial_pregnant1   "You're pregnant.  Keep all three nutrient levels up so that the pregnancy can progress."
+
+
+
+tutorial_birth1   "Congratulations, you just gave birth to a bouncing baby... gardener!  Your baby will follow you and share all the food you eat for a while."
+
+tutorial_birth2   "Eat a balanced diet to keep your baby growing.  Once full grown, it will head out on its own."
+
+
+tutorial_poisoned1  "You just moved across poisoned ground, and some of your stored fruit became poisoned."
+
+tutorial_poisoned2  "Eating poisoned fruit will bring on a quick death."
+
+
+
+tutorial_death1   "You just died.  Notice the ring that will form at the location of your death.  That is the first ring in the gate to immortality."
+
+tutorial_death2   "Four more rings must be opened before the gate itself opens.  The gardeners you control are special:  they have the power to open these rings by dying."
+
+tutorial_death3   "To open more rings, you need to bring your future gardeners back to the center of the gate right before they die."
+
+tutorial_death4  "If your gardener dies away from the site of an existing gate, no new ring will be opened."
+
+tutorial_death5  "A gate is destroyed by poisoned ground.  If this happens, you will need to start a new gate elsewhere."
+
+
+
+tutorial_death1a   "You just died again.  This time, you have no offspring to take control of, so your game is over.  Hit the Restart button to start a new game."
+
+tutorial_death6a   "Unfortunately, you have no offspring to take control of, so your game is over.  Hit the Restart button to start a new game."
+
+tutorial_death6b   "You just took control of your next offspring."
+
+
+
+tutorial_gate1   "The gate to immortality is now open.  Each gardener that moves into the gate will become immortal."
+
+tutorial_gate2   "When your gardener moves into the gate, the gate will close, and no other gardeners will be able to pass through it."
+
+tutorial_gate3   "If you want to take some gardeners with you, you will need to lead them through the gate without stepping into the gate yourself."
+
+tutorial_gate4   "You can use the Lead button to do this.  Gardeners will only follow you if they like you a lot, though."
+
+tutorial_gate5   "The more gardeners you save, the larger your reward."
+
+
+tutorial_immortal1  "The gate to immortality has now closed, and the gardeners you chose have been immortalized."
+
+tutorial_immortal2  "You have received your reward, but you might not have found it yet.  The reward is something that you can take with you outside the game."
+
+tutorial_immortal3  "Quit the game, and then take a look around for your reward.  Or, if you are a spoil-sport, click the Continue button in this tutorial for a hint."
+
+
+tutorial_immortal4  "Are you sure you want a hint?"
+
+
+tutorial_immortal5  "Look at the immortal PNG file in in your Cultivation folder.  You should be able to view it with a web browser."
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+#!/bin/bash
+
+#
+# Modification History
+#
+# 2006-July-13    Jason Rohrer
+# Copied from Transcend.
+#
+# 2006-November-26    Jason Rohrer
+# Added tool-tip stuff.
+#
+
+
+cd game2
+chmod u+x ./configure
+./configure
+
+
+echo "Building portaudio..."
+
+cd ../minorGems/sound/portaudio
+chmod u+x ./configure
+./configure
+make
+cd ../../../game2
+
+
+echo "Building Cultivation..."
+
+cd gameSource
+make
+cd ..
+
+
+
+cd ..
+
+cp game2/gameSource/Cultivation ./Cultivation
+cp game2/documentation/how_to_*.txt .
+cp game2/gameSource/features.txt .
+cp game2/gameSource/language.txt .
+cp game2/gameSource/font.tga .
+mkdir ./languages
+cp game2/gameSource/languages/*.txt ./languages
+
+
+echo "Run Cultivation to play."
+
+
+
+
